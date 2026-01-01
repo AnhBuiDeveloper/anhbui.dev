@@ -1,42 +1,17 @@
 ---
+import SiteLayout from "../components/SiteLayout.astro";
 const name = "Anh Bui";
-const title = "Senior .NET Engineer • Azure • Microservices";
-const email = "anh.bui@anhbui.dev";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{name}</title>
-    <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #fafafa; }
-      .container { max-width: 900px; margin: 0 auto; padding: 80px 24px; }
-      .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 40px; }
-      h1 { margin: 0 0 8px; font-size: 40px; }
-      p { margin: 0; font-size: 18px; color: #374151; }
-      .links { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
-      a { text-decoration: none; padding: 10px 14px; border: 1px solid #e5e7eb; border-radius: 999px; color: #111827; }
-      a:hover { background: #f3f4f6; }
-      .muted { margin-top: 18px; font-size: 14px; color: #6b7280; }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="card">
-        <h1>{name}</h1>
-        <p>{title}</p>
+<SiteLayout title={`${name} — Senior .NET Engineer`}>
+  <h1>{name}</h1>
+  <p><b>Senior .NET Engineer</b> focusing on Azure, microservices, reliability, and fintech integration.</p>
 
-        <div class="links">
-          <a href={`mailto:${email}`}>Email</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="/blog">Blog</a>
-          <a href="/kb">Knowledge Base</a>
-        </div>
+  <p>
+    This site is my personal hub: architecture notes, interview-ready knowledge, and production lessons learned.
+  </p>
 
-        <div class="muted">Built with Astro • Hosted on Azure Static Web Apps</div>
-      </div>
-    </div>
-  </body>
-</html>
+  <p>
+    Quick links: <a href="/kb">Knowledge Base</a> • <a href="/blog">Blog</a>
+  </p>
+</SiteLayout>

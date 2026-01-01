@@ -1,7 +1,12 @@
-<html>
-  <body style="font-family:system-ui;padding:40px">
-    <h1>Knowledge Base</h1>
-    <p>.NET, Azure, Redis, Microservices…</p>
-    <p><a href="/">← Home</a></p>
-  </body>
-</html>
+---
+import SiteLayout from "../components/SiteLayout.astro";
+---
+<SiteLayout title="Knowledge Base — Anh Bui">
+  <h1>Knowledge Base</h1>
+  <p>Interview-ready notes organised by topic.</p>
+  <ul>
+    <li><a href="/kb/redis">Redis in .NET microservices</a></li>
+    <li><a href="/kb/resilience">Retry / Circuit Breaker / Polly</a></li>
+    <li><a href="/kb/azure">Azure quick notes</a></li>
+  </ul>
+</SiteLayout>
