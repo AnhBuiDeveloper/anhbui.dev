@@ -18,7 +18,7 @@ const last_posts = posts.slice(0, 3);
       class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 shadow-sm"
     >
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-        <!-- Identity block (mobile top, desktop right) -->
+        <!-- Identity -->
         <div class="md:col-span-4 md:order-2 md:justify-self-end order-1">
           <div
             class="flex items-center md:flex-col md:items-end gap-4 md:gap-3"
@@ -27,59 +27,36 @@ const last_posts = posts.slice(0, 3);
               src="/profile.png"
               alt="Anh Bui"
               class="w-20 h-20 md:w-36 md:h-36 rounded-full object-cover ring-1 ring-white/15 shadow-lg"
-              loading="eager"
             />
-
             <div class="text-left md:text-right">
               <div class="font-semibold leading-tight">Based in UK</div>
               <div class="text-sm opacity-70">Fintech • Cloud • .NET</div>
             </div>
           </div>
 
-          <!-- Mobile-only compact tags under identity -->
-          <div class="mt-4 flex flex-wrap gap-2 md:hidden">
-            <span class="badge badge-ghost">.NET</span>
-            <span class="badge badge-ghost">Azure</span>
-            <span class="badge badge-ghost">Microservices</span>
-            <span class="badge badge-ghost">Payments</span>
-            <span class="badge badge-ghost">Reliability</span>
-          </div>
-
-          <!-- Desktop actions (keeps right column “useful”) -->
-          <div class="mt-5 hidden md:flex flex-col gap-2 items-end">
+          <!-- Desktop actions -->
+          <div class="mt-6 hidden md:flex flex-col gap-2 items-end">
             <a href="/kb" class="btn btn-primary btn-sm"
               >Explore Knowledge Base</a
             >
             <a href="/contact" class="btn btn-outline btn-sm">Contact</a>
-
             <div class="mt-1 text-sm opacity-70">
-              <a
-                href="/cv"
-                class="underline underline-offset-4 hover:opacity-90">CV</a
-              >
+              <a href="/cv" class="underline underline-offset-4">CV</a>
               <span class="opacity-50"> • </span>
-              <a
-                href="/blog"
-                class="underline underline-offset-4 hover:opacity-90">Blog</a
-              >
+              <a href="/blog" class="underline underline-offset-4">Blog</a>
             </div>
           </div>
         </div>
 
-        <!-- Main hero text -->
+        <!-- Text -->
         <div class="md:col-span-8 md:order-1 order-2">
-          <h1
-            class="text-5xl md:text-6xl font-bold tracking-tight leading-tight"
-          >
-            Anh Bui
-          </h1>
+          <h1 class="text-5xl md:text-6xl font-bold tracking-tight">Anh Bui</h1>
 
           <p class="mt-3 text-xl md:text-2xl font-semibold opacity-90">
             Senior .NET Engineer building reliable cloud systems on Azure
           </p>
 
-          <!-- Desktop tags near title -->
-          <div class="mt-4 hidden md:flex flex-wrap gap-2">
+          <div class="mt-4 flex flex-wrap gap-2">
             <span class="badge badge-ghost">.NET</span>
             <span class="badge badge-ghost">Azure</span>
             <span class="badge badge-ghost">Microservices</span>
@@ -87,105 +64,88 @@ const last_posts = posts.slice(0, 3);
             <span class="badge badge-ghost">Reliability</span>
           </div>
 
-          <div class="mt-5 space-y-4 max-w-2xl">
-            <p class="text-base md:text-lg opacity-85 leading-relaxed">
+          <div class="mt-6 space-y-4 max-w-2xl">
+            <p class="opacity-85">
               I’m a Senior .NET Engineer with nearly two decades of experience
               delivering business-critical systems across <b>fintech/payments</b
               > and <b>cloud</b>.
             </p>
 
-            <p class="text-base md:text-lg opacity-85 leading-relaxed">
+            <p class="opacity-85">
               I specialise in turning complex requirements into reliable,
-              maintainable solutions — from
-              <b> modernising legacy platforms</b> to designing <b
-                >cloud-ready microservices</b
-              > on Azure, with a strong focus on <b>observability</b>, <b
-                >resilience</b
-              >, and long-term maintainability.
+              maintainable solutions — from <b>modernising legacy platforms</b> to
+              designing
+              <b> cloud-ready microservices</b> on Azure, with a strong focus on
+              <b> observability</b>, <b>resilience</b>, and long-term
+              maintainability.
             </p>
           </div>
 
-          <!-- Highlights (2 columns on desktop, 1 column on mobile) -->
-          <div class="mt-7">
-            <div class="text-xs uppercase tracking-widest opacity-60 mb-3">
-              Highlights
+          <!-- HIGHLIGHTS AS CARDS -->
+          <div class="mt-8">
+            <div class="text-xs uppercase tracking-widest opacity-60 mb-4">
+              Core focus areas
             </div>
 
-            <ul
-              class="space-y-2 text-base md:text-lg opacity-85 md:columns-2 md:gap-10"
-            >
-              <li class="break-inside-avoid flex gap-3 mb-2">
-                <span class="opacity-60">•</span>
-                <span
-                  ><b>Payments:</b> hosted checkout, tokenisation, 3DS, webhooks,
-                  async/event-driven workflows</span
-                >
-              </li>
-              <li class="break-inside-avoid flex gap-3 mb-2">
-                <span class="opacity-60">•</span>
-                <span
-                  ><b>Cloud:</b> Azure Functions, Storage Queues, App Services, Key
-                  Vault, Application Insights</span
-                >
-              </li>
-              <li class="break-inside-avoid flex gap-3 mb-2">
-                <span class="opacity-60">•</span>
-                <span
-                  ><b>Reliability:</b> retry/circuit breaker, idempotency, monitoring
-                  & alerting, incident-focused debugging</span
-                >
-              </li>
-              <li class="break-inside-avoid flex gap-3 mb-2">
-                <span class="opacity-60">•</span>
-                <span
-                  ><b>Modernisation:</b> legacy VB6 ↔ .NET integration and gradual
-                  replacement strategies</span
-                >
-              </li>
-            </ul>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                <div class="font-semibold mb-1">Payments</div>
+                <p class="text-sm opacity-80">
+                  Hosted checkout, tokenisation, 3DS, webhooks, async and
+                  event-driven workflows.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                <div class="font-semibold mb-1">Cloud</div>
+                <p class="text-sm opacity-80">
+                  Azure Functions, Storage Queues, App Services, Key Vault,
+                  Application Insights.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                <div class="font-semibold mb-1">Reliability</div>
+                <p class="text-sm opacity-80">
+                  Retry & circuit breaker patterns, idempotency, monitoring,
+                  alerting, incidents.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                <div class="font-semibold mb-1">Modernisation</div>
+                <p class="text-sm opacity-80">
+                  Legacy VB6 ↔ .NET integration, incremental replacement
+                  strategies.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <!-- CTA (mobile only; desktop uses right column actions) -->
+          <!-- Mobile CTA -->
           <div class="mt-8 flex flex-wrap gap-3 md:hidden">
             <a href="/kb" class="btn btn-primary">Knowledge Base</a>
             <a href="/contact" class="btn btn-outline">Contact</a>
             <a href="/cv" class="btn btn-ghost">CV</a>
             <a href="/blog" class="btn btn-ghost">Blog</a>
           </div>
-
-          <div class="mt-3 text-sm opacity-70">
-            Prefer reading notes? Start here:
-            <a href="/kb" class="underline underline-offset-4 hover:opacity-90"
-              >Knowledge Base</a
-            >
-            <span class="opacity-50"> • </span>
-            <a
-              href="/blog"
-              class="underline underline-offset-4 hover:opacity-90"
-              >Latest posts</a
-            >
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION SEPARATOR -->
-  <div class="mt-10 border-t border-white/10"></div>
-
   <!-- PROJECTS -->
-  <section class="mt-10">
-    <div class="text-3xl w-full font-bold mb-2">Recent projects {"</>"}</div>
+  <section class="mt-12">
+    <div class="text-3xl font-bold mb-2">Recent projects {"</>"}</div>
     <div class="text-sm opacity-70 mb-5">
-      A few examples — I’ll replace these demo items with real case studies over
-      time.
+      A few examples — real case studies coming soon.
     </div>
 
     <div class="rounded-2xl border border-white/10 bg-white/5 p-4 md:p-6">
       <HorizontalCard
         title="Demo Project 1"
         img="/post_img.webp"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        desc="Lorem ipsum..."
         url="#"
         badge="NEW"
       />
@@ -193,14 +153,14 @@ const last_posts = posts.slice(0, 3);
       <HorizontalCard
         title="Demo Project 2"
         img="/post_img.webp"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        desc="Lorem ipsum..."
         url="#"
       />
       <div class="divider my-0"></div>
       <HorizontalCard
         title="Demo Project 3"
         img="/post_img.webp"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        desc="Lorem ipsum..."
         url="#"
         badge="FOSS"
       />
@@ -208,9 +168,8 @@ const last_posts = posts.slice(0, 3);
   </section>
 
   <!-- BLOG -->
-  <section class="mt-10">
-    <div class="text-3xl w-full font-bold mb-5">Latest from blog</div>
-
+  <section class="mt-12">
+    <div class="text-3xl font-bold mb-5">Latest from blog</div>
     <div class="rounded-2xl border border-white/10 bg-white/5 p-4 md:p-6">
       {
         last_posts.map((post) => (
@@ -220,8 +179,6 @@ const last_posts = posts.slice(0, 3);
               img={post.data.heroImage}
               desc={post.data.description}
               url={"/blog/" + createSlug(post.data.title, post.slug)}
-              target="_self"
-              badge={post.data.badge}
             />
             <div class="divider my-0" />
           </>
