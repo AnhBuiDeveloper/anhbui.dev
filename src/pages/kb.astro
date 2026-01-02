@@ -1,12 +1,21 @@
 ---
-import SiteLayout from "../components/SiteLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<SiteLayout title="Knowledge Base — Anh Bui">
-  <h1>Knowledge Base</h1>
-  <p>Interview-ready notes organised by topic.</p>
-  <ul>
-    <li><a href="/kb/redis">Redis in .NET microservices</a></li>
-    <li><a href="/kb/resilience">Retry / Circuit Breaker / Polly</a></li>
-    <li><a href="/kb/azure">Azure quick notes</a></li>
-  </ul>
-</SiteLayout>
+
+<BaseLayout title="Knowledge Base" sideBarActiveItemID="kb">
+    <div>
+        <div class="text-3xl w-full font-bold mb-5">Knowledge Base</div>
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Architecture Notes</div>
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Interview Knowledge</div>
+    </div>
+
+    <div class="mb-5">
+        <div class="text-3xl w-full font-bold">Production Lessons</div>
+    </div>
+</BaseLayout>

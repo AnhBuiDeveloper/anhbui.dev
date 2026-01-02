@@ -1,0 +1,25 @@
+---
+import ThemeController from "./ThemeController.astro";
+---
+
+<div
+  class="sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"
+>
+  <div class="navbar w-full max-w-[900px]">
+    <div class="navbar-start">
+      <a class="btn btn-ghost normal-case text-xl" href="/">AnhBui.dev</a>
+    </div>
+    <div class="navbar-end">
+      <div class="hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="/">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/kb">Knowledge Base</a></li>
+          <li><a href="/cv">CV</a></li>
+          <li><a href="mailto:contact@anhbui.dev">Contact</a></li>
+        </ul>
+      </div>
+      <ThemeController />
+    </div>
+  </div>
+</div>
