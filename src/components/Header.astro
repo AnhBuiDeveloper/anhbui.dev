@@ -3,9 +3,9 @@ import ThemeController from "./ThemeController.astro";
 ---
 
 <div
-  class="sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"
+  class="sticky top-0 z-30 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm flex flex-col"
 >
-  <div class="navbar w-full max-w-[900px]">
+  <div class="navbar w-full max-w-[900px] mx-auto">
     <div class="navbar-start">
       <a class="btn btn-ghost normal-case text-xl" href="/">AnhBui.dev</a>
     </div>
@@ -20,6 +20,17 @@ import ThemeController from "./ThemeController.astro";
         </ul>
       </div>
       <ThemeController />
+    </div>
+  </div>
+  <div class="block lg:hidden w-full border-t border-base-200">
+    <div class="w-full max-w-[900px] mx-auto">
+      <ul class="menu menu-horizontal px-2 overflow-x-auto">
+        <li><a href="/">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/kb">Knowledge Base</a></li>
+        <li><a href="/cv">CV</a></li>
+        <li><a href="mailto:contact@anhbui.dev">Contact</a></li>
+      </ul>
     </div>
   </div>
 </div>
