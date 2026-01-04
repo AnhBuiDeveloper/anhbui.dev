@@ -8,6 +8,20 @@ Source code for [anhbui.dev](https://anhbui.dev), a personal portfolio and knowl
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
 - [DaisyUI](https://daisyui.com/) - Tailwind CSS components
 
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   ├── components/
+│   ├── layouts/
+│   └── pages/
+└── package.json
+```
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
