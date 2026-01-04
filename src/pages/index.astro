@@ -3,7 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <!-- HOME = Personal Brand only -->
   <section class="mt-6">
     <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
@@ -54,6 +53,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             and Azure cloud reliability
           </p>
 
+          <!-- TAGS: Tier 1 (brand pillars) -->
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="badge badge-ghost">Fintech</span>
             <span class="badge badge-ghost">Payments</span>
@@ -62,7 +62,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <span class="badge badge-ghost">Reliability</span>
           </div>
 
-          <!-- Short intro (more fintech/payments focused) -->
+          <!-- TAGS: Tier 2 (proof / technical keywords) -->
+          <div class="mt-2 flex flex-wrap gap-2 opacity-90">
+            <span class="badge badge-outline">PCI / Hosted Checkout</span>
+            <span class="badge badge-outline">Tokenisation</span>
+            <span class="badge badge-outline">3-D Secure (3DS)</span>
+            <span class="badge badge-outline">Webhooks / Callbacks</span>
+            <span class="badge badge-outline">Idempotency</span>
+            <span class="badge badge-outline">Retry + Circuit Breaker</span>
+            <span class="badge badge-outline">Azure Functions</span>
+            <span class="badge badge-outline">Azure Storage Queues</span>
+            <span class="badge badge-outline">App Insights</span>
+          </div>
+
+          <!-- Intro -->
           <div class="mt-6 space-y-4 max-w-2xl">
             <p class="opacity-85 leading-relaxed">
               Senior .NET Engineer with <b>20+ years</b> of experience delivering
@@ -83,13 +96,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
             <p class="opacity-85 leading-relaxed">
               On the cloud side, I build and operate services on <b>Azure</b>,
-              using practical architecture trade-offs and a “run-it-in-prod”
+              using pragmatic architecture trade-offs and a “run-it-in-prod”
               mindset: monitoring, alerting, incident-driven debugging, and
               maintainability.
             </p>
           </div>
 
-          <!-- Strengths & achievements (tilt to fintech/integrations/azure) -->
+          <!-- Strengths & achievements -->
           <div class="mt-8">
             <div class="text-xs uppercase tracking-widest opacity-60 mb-4">
               Strengths & achievements
@@ -143,7 +156,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </ul>
           </div>
 
-          <!-- Capability cards (focused) -->
+          <!-- Capability cards -->
           <div class="mt-8">
             <div class="text-xs uppercase tracking-widest opacity-60 mb-4">
               What I build
@@ -190,7 +203,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </div>
           </div>
 
-          <!-- Primary navigation CTA (mobile) -->
+          <!-- Mobile CTA -->
           <div class="mt-8 flex flex-wrap gap-3 md:hidden">
             <a href="/kb" class="btn btn-primary">Knowledge Base</a>
             <a href="/case-studies" class="btn btn-outline">Case Studies</a>
@@ -205,9 +218,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               class="underline underline-offset-4 hover:opacity-90"
               >Case Studies</a
             >
-            <span class="opacity-50"> • </span><a
-              href="/kb"
-              class="underline underline-offset-4 hover:opacity-90"
+            <span class="opacity-50"> • </span>
+            <a href="/kb" class="underline underline-offset-4 hover:opacity-90"
               >Knowledge Base</a
             >
           </div>
