@@ -4,10 +4,17 @@ import HorizontalCard from "../../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../../lib/createSlug";
 
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+
 export async function getStaticPaths({ paginate }) {
   const posts = await getCollection("case-studies");
   posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   return paginate(posts, { pageSize: 10 });
+}
+
+interface Props {
+  page: Page<CollectionEntry<"case-studies">>;
 }
 
 const { page } = Astro.props;

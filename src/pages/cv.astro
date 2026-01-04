@@ -3,90 +3,166 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div>
+<BaseLayout title="CV" sideBarActiveItemID="cv">
+  <!-- SUMMARY -->
+  <section class="mb-12">
+    <h1 class="text-3xl font-bold mb-4">Summary</h1>
 
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
+    <p class="text-lg leading-relaxed text-slate-300">
+      Senior <strong>.NET Engineer</strong> with <strong
+        >20+ years of experience</strong
+      > delivering
+      <strong>business-critical systems</strong>, with a strong focus on
+      <strong>fintech, payments, integrations</strong>, and <strong
+        >Azure cloud platforms</strong
+      >.
+    </p>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
+    <p class="mt-4 text-slate-400 leading-relaxed">
+      Specialised in building <strong
+        >secure, reliable, and auditable payment solutions</strong
+      >, modernising legacy platforms, and designing integration-heavy systems
+      that are safe to run and evolve in production.
+    </p>
+  </section>
 
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-  </div>
+  <!-- EXPERIENCE -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">Experience</h2>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
+    <div class="time-line-container grid gap-6">
+      <TimeLineElement
+        title="Senior Software Engineer – Fintech / Payments"
+        subtitle="UK · Recent years"
+      >
+        <ul class="list-disc ml-6 text-slate-300 grid gap-1">
+          <li>
+            Delivered end-to-end <strong>payment integrations</strong> using hosted
+            checkout, tokenisation, and <strong>3-D Secure (3DS)</strong>.
+          </li>
+          <li>
+            Designed and operated <strong
+              >asynchronous, event-driven workflows</strong
+            > using Azure Storage Queues to improve reliability and fault isolation.
+          </li>
+          <li>
+            Built robust webhook and callback handling with <strong
+              >idempotency</strong
+            >, retries, and clear payment state transitions.
+          </li>
+          <li>
+            Improved observability with structured logging, correlation IDs, and
+            Azure Application Insights to reduce MTTR.
+          </li>
+        </ul>
+      </TimeLineElement>
 
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-  </div>
+      <TimeLineElement
+        title="Senior / Lead .NET Engineer"
+        subtitle="Enterprise & regulated environments"
+      >
+        <ul class="list-disc ml-6 text-slate-300 grid gap-1">
+          <li>
+            Designed and maintained large-scale <strong
+              >.NET enterprise systems</strong
+            >
+            supporting core business operations.
+          </li>
+          <li>
+            Led and contributed to <strong>integration-heavy platforms</strong> across
+            internal systems and third-party providers (REST, SOAP, file-based).
+          </li>
+          <li>
+            Played technical leadership roles including <strong>Dev Lead</strong
+            > and
+            <strong>Senior Engineer</strong>, mentoring junior and mid-level
+            developers.
+          </li>
+        </ul>
+      </TimeLineElement>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
+      <TimeLineElement
+        title="Software Engineer / Analyst Programmer"
+        subtitle="Early career · Multiple domains"
+      >
+        <ul class="list-disc ml-6 text-slate-300 grid gap-1">
+          <li>
+            Developed applications across multiple industries including
+            healthcare, housing, manufacturing, and data transformation.
+          </li>
+          <li>
+            Worked with <strong>VB6 and early .NET</strong>, gaining deep
+            understanding of legacy systems and long-lived platforms.
+          </li>
+          <li>
+            Built a strong foundation in system design, debugging, and
+            production support.
+          </li>
+        </ul>
+      </TimeLineElement>
+    </div>
+  </section>
 
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
+  <!-- EDUCATION (moved below Experience as requested) -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">Education</h2>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
+    <ul class="list-disc ml-6 text-slate-300">
+      <li>
+        Bachelor’s Degree in Information Technology / Computer Science
+        <span class="text-slate-400">(details available in full CV)</span>
+      </li>
+    </ul>
+  </section>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
+  <!-- CERTIFICATES (kept) -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">Certificates</h2>
+
+    <ul class="list-disc ml-6 text-slate-300">
+      <li>Microsoft .NET related certifications (historical)</li>
+      <li>Agile / Scrum training and certifications</li>
+      <li>Ongoing self-directed learning in cloud and system design</li>
+    </ul>
+  </section>
+
+  <!-- SKILLS (kept, slightly refined wording) -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">Skills</h2>
+
+    <ul class="list-disc ml-6 grid gap-2 text-slate-300">
+      <li>
+        <strong>Languages & Frameworks:</strong> C#, .NET, ASP.NET, Web APIs
+      </li>
+      <li>
+        <strong>Fintech & Payments:</strong> hosted checkout, tokenisation, 3DS, payment
+        callbacks, reconciliation
+      </li>
+      <li>
+        <strong>Integrations:</strong> REST, SOAP/WCF, FTP/SFTP/WebDAV, secure authentication
+        (OAuth2, Bearer, Basic)
+      </li>
+      <li>
+        <strong>Cloud & Azure:</strong> Azure Functions, Storage Queues, App Services,
+        Key Vault, Application Insights
+      </li>
+      <li>
+        <strong>Reliability:</strong> retries, circuit breaker, idempotency, logging,
+        monitoring, alerting
+      </li>
+      <li>
+        <strong>Practices:</strong> Agile/Scrum, code reviews, mentoring, incremental
+        modernisation
+      </li>
+    </ul>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section>
+    <p class="text-slate-400">
+      This web CV is a concise overview.
+      <a href="/contact" class="underline hover:text-white"> Contact me </a>
+      to request a detailed CV or discuss opportunities.
+    </p>
+  </section>
 </BaseLayout>
