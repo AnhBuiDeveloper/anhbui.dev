@@ -10,7 +10,7 @@ Source code for [anhbui.dev](https://anhbui.dev), a personal portfolio and knowl
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside this project, you'll see the following folders and files:
 
 ```text
 /
