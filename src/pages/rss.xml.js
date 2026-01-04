@@ -3,7 +3,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import { getCollection } from "astro:content";
 
 export async function GET(context) {
-  const blog = await getCollection("blog");
+  const blog = await getCollection("case-studies");
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
@@ -12,7 +12,7 @@ export async function GET(context) {
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `/blog/${post.slug}/`,
+      link: `/case-studies/${post.slug}/`,
     })),
   });
 }

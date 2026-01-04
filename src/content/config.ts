@@ -31,6 +31,6 @@ const blogCollection = defineCollection({ schema: blogSchema });
 const storeCollection = defineCollection({ schema: storeSchema });
 
 export const collections = {
-    'blog': blogCollection,
+    'case-studies': blogCollection,
     'store': storeCollection
 }
