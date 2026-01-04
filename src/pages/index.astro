@@ -1,189 +1,217 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug";
-
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
-
-const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <!-- HERO -->
+  <!-- HOME = Personal Brand only -->
   <section class="mt-6">
-    <div
-      class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 shadow-sm"
-    >
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         <!-- Identity -->
-        <div class="md:col-span-4 md:order-2 md:justify-self-end order-1">
-          <div
-            class="flex items-center md:flex-col md:items-end gap-4 md:gap-3"
-          >
+        <aside class="md:col-span-4 md:order-2 order-1 md:justify-self-end">
+          <div class="flex items-center md:flex-col md:items-end gap-4">
             <img
               src="/profile.png"
               alt="Anh Bui"
-              class="w-20 h-20 md:w-36 md:h-36 rounded-full object-cover ring-1 ring-white/15 shadow-lg"
+              class="w-20 h-20 md:w-36 md:h-36 rounded-full object-cover ring-1 ring-white/15 shadow"
+              loading="eager"
             />
             <div class="text-left md:text-right">
-              <div class="font-semibold leading-tight">Based in UK</div>
-              <div class="text-sm opacity-70">Fintech • Cloud • .NET</div>
+              <div class="font-semibold leading-tight">Anh Bui</div>
+              <div class="text-sm opacity-70">Based in UK</div>
+              <div class="text-sm opacity-60">Fintech • Payments • Azure</div>
             </div>
           </div>
 
-          <!-- Desktop actions -->
-          <div class="mt-6 hidden md:flex flex-col gap-2 items-end">
+          <!-- Desktop CTA -->
+          <div class="mt-6 hidden md:flex flex-col items-end gap-2">
             <a href="/kb" class="btn btn-primary btn-sm"
               >Explore Knowledge Base</a
             >
-            <a href="/contact" class="btn btn-outline btn-sm">Contact</a>
-            <div class="mt-1 text-sm opacity-70">
-              <a href="/cv" class="underline underline-offset-4">CV</a>
+            <a href="/case-studies" class="btn btn-outline btn-sm"
+              >Read Case Studies</a
+            >
+            <div class="text-sm opacity-70 mt-1">
+              <a
+                href="/cv"
+                class="underline underline-offset-4 hover:opacity-90">CV</a
+              >
               <span class="opacity-50"> • </span>
-              <a href="/blog" class="underline underline-offset-4">Blog</a>
+              <a
+                href="/contact"
+                class="underline underline-offset-4 hover:opacity-90">Contact</a
+              >
             </div>
           </div>
-        </div>
+        </aside>
 
-        <!-- Text -->
+        <!-- Brand narrative -->
         <div class="md:col-span-8 md:order-1 order-2">
           <h1 class="text-5xl md:text-6xl font-bold tracking-tight">Anh Bui</h1>
 
           <p class="mt-3 text-xl md:text-2xl font-semibold opacity-90">
-            Senior .NET Engineer building reliable cloud systems on Azure
+            Senior .NET Engineer specialising in fintech/payments, integrations,
+            and Azure cloud reliability
           </p>
 
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="badge badge-ghost">.NET</span>
-            <span class="badge badge-ghost">Azure</span>
-            <span class="badge badge-ghost">Microservices</span>
+            <span class="badge badge-ghost">Fintech</span>
             <span class="badge badge-ghost">Payments</span>
+            <span class="badge badge-ghost">Integrations</span>
+            <span class="badge badge-ghost">Azure</span>
             <span class="badge badge-ghost">Reliability</span>
           </div>
 
+          <!-- Short intro (more fintech/payments focused) -->
           <div class="mt-6 space-y-4 max-w-2xl">
-            <p class="opacity-85">
-              I’m a Senior .NET Engineer with nearly two decades of experience
-              delivering business-critical systems across <b>fintech/payments</b
-              > and <b>cloud</b>.
+            <p class="opacity-85 leading-relaxed">
+              Senior .NET Engineer with <b>20+ years</b> of experience delivering
+              <b>business-critical systems</b>. In recent years my focus has
+              been on <b>fintech and payment platforms</b> — building secure, reliable,
+              and auditable services that hold up under real-world traffic and operational
+              pressure.
             </p>
 
-            <p class="opacity-85">
-              I specialise in turning complex requirements into reliable,
-              maintainable solutions — from <b>modernising legacy platforms</b> to
-              designing
-              <b> cloud-ready microservices</b> on Azure, with a strong focus on
-              <b> observability</b>, <b>resilience</b>, and long-term
+            <p class="opacity-85 leading-relaxed">
+              I specialise in <b>integration-heavy systems</b>: hosted checkout
+              flows, tokenisation,
+              <b>3-D Secure</b>, callbacks/webhooks, and asynchronous processing
+              — designed with
+              <b>idempotency</b>, <b>resilience patterns</b>, and production
+              observability from day one.
+            </p>
+
+            <p class="opacity-85 leading-relaxed">
+              On the cloud side, I build and operate services on <b>Azure</b>,
+              using practical architecture trade-offs and a “run-it-in-prod”
+              mindset: monitoring, alerting, incident-driven debugging, and
               maintainability.
             </p>
           </div>
 
-          <!-- HIGHLIGHTS AS CARDS -->
+          <!-- Strengths & achievements (tilt to fintech/integrations/azure) -->
           <div class="mt-8">
             <div class="text-xs uppercase tracking-widest opacity-60 mb-4">
-              Core focus areas
+              Strengths & achievements
+            </div>
+
+            <ul class="space-y-2 text-sm md:text-base opacity-85">
+              <li class="flex gap-3">
+                <span class="opacity-60">•</span>
+                <span>
+                  Delivered end-to-end <b>payment integrations</b> (hosted checkout,
+                  tokenisation, 3DS) with robust callback/webhook handling and clear
+                  state transitions for auditing and supportability.
+                </span>
+              </li>
+
+              <li class="flex gap-3">
+                <span class="opacity-60">•</span>
+                <span>
+                  Built <b>integration pipelines</b> across partners using REST/SOAP/files
+                  (FTP/SFTP/WebDAV), with pragmatic security (OAuth2/Bearer/Basic)
+                  and strong troubleshooting discipline.
+                </span>
+              </li>
+
+              <li class="flex gap-3">
+                <span class="opacity-60">•</span>
+                <span>
+                  Implemented <b>cloud-native building blocks on Azure</b> (Functions,
+                  Storage Queues, App Services, Key Vault, Application Insights) and
+                  improved reliability with monitoring-first design.
+                </span>
+              </li>
+
+              <li class="flex gap-3">
+                <span class="opacity-60">•</span>
+                <span>
+                  Strong reliability mindset: <b>retry/circuit breaker</b>,
+                  idempotency, correlation IDs, and incident-focused debugging
+                  to reduce MTTR and make systems easier to operate.
+                </span>
+              </li>
+
+              <li class="flex gap-3">
+                <span class="opacity-60">•</span>
+                <span>
+                  Proven modernisation approach: improving legacy platforms
+                  safely with incremental changes, reducing defects and
+                  operational risk while keeping delivery moving.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Capability cards (focused) -->
+          <div class="mt-8">
+            <div class="text-xs uppercase tracking-widest opacity-60 mb-4">
+              What I build
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold mb-1">Payments</div>
+                <div class="font-semibold mb-1">Fintech & Payments</div>
                 <p class="text-sm opacity-80">
-                  Hosted checkout, tokenisation, 3DS, webhooks, async and
-                  event-driven workflows.
+                  Hosted checkout, tokenisation, 3DS, async processing, and
+                  event-driven workflows — designed for compliance, failure
+                  recovery, and operational clarity.
                 </p>
               </div>
 
               <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold mb-1">Cloud</div>
+                <div class="font-semibold mb-1">Integrations at Scale</div>
                 <p class="text-sm opacity-80">
-                  Azure Functions, Storage Queues, App Services, Key Vault,
-                  Application Insights.
+                  Partner APIs and file exchanges (REST/SOAP/files) with
+                  contract-first thinking, secure auth, retries, idempotency,
+                  and observability.
                 </p>
               </div>
 
               <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold mb-1">Reliability</div>
+                <div class="font-semibold mb-1">Azure Cloud Engineering</div>
                 <p class="text-sm opacity-80">
-                  Retry & circuit breaker patterns, idempotency, monitoring,
-                  alerting, incidents.
+                  Azure Functions/Queues, App Services, Key Vault, App Insights
+                  — environment-aware configuration, CI/CD readiness, and
+                  monitoring-first operation.
                 </p>
               </div>
 
               <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold mb-1">Modernisation</div>
+                <div class="font-semibold mb-1">
+                  Reliability & Production Ops
+                </div>
                 <p class="text-sm opacity-80">
-                  Legacy VB6 ↔ .NET integration, incremental replacement
-                  strategies.
+                  Resilience patterns, incident-driven debugging, and pragmatic
+                  trade-offs that keep services stable, traceable, and easy to
+                  evolve.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Mobile CTA -->
+          <!-- Primary navigation CTA (mobile) -->
           <div class="mt-8 flex flex-wrap gap-3 md:hidden">
             <a href="/kb" class="btn btn-primary">Knowledge Base</a>
-            <a href="/contact" class="btn btn-outline">Contact</a>
+            <a href="/case-studies" class="btn btn-outline">Case Studies</a>
             <a href="/cv" class="btn btn-ghost">CV</a>
-            <a href="/blog" class="btn btn-ghost">Blog</a>
+            <a href="/contact" class="btn btn-ghost">Contact</a>
+          </div>
+
+          <div class="mt-3 text-sm opacity-70">
+            Want more detail? Go to
+            <a
+              href="/case-studies"
+              class="underline underline-offset-4 hover:opacity-90"
+              >Case Studies</a
+            >
+            <span class="opacity-50"> • </span>
+            <a href="/kb" class="underline underline-offset-4 hover:opacity-90"
+              >Knowledge Base</a
+            >
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="mt-12">
-    <div class="text-3xl font-bold mb-2">Recent projects {"</>"}</div>
-    <div class="text-sm opacity-70 mb-5">
-      A few examples — real case studies coming soon.
-    </div>
-
-    <div class="rounded-2xl border border-white/10 bg-white/5 p-4 md:p-6">
-      <HorizontalCard
-        title="Demo Project 1"
-        img="/post_img.webp"
-        desc="Lorem ipsum..."
-        url="#"
-        badge="NEW"
-      />
-      <div class="divider my-0"></div>
-      <HorizontalCard
-        title="Demo Project 2"
-        img="/post_img.webp"
-        desc="Lorem ipsum..."
-        url="#"
-      />
-      <div class="divider my-0"></div>
-      <HorizontalCard
-        title="Demo Project 3"
-        img="/post_img.webp"
-        desc="Lorem ipsum..."
-        url="#"
-        badge="FOSS"
-      />
-    </div>
-  </section>
-
-  <!-- BLOG -->
-  <section class="mt-12">
-    <div class="text-3xl font-bold mb-5">Latest from blog</div>
-    <div class="rounded-2xl border border-white/10 bg-white/5 p-4 md:p-6">
-      {
-        last_posts.map((post) => (
-          <>
-            <HorizontalCard
-              title={post.data.title}
-              img={post.data.heroImage}
-              desc={post.data.description}
-              url={"/blog/" + createSlug(post.data.title, post.slug)}
-            />
-            <div class="divider my-0" />
-          </>
-        ))
-      }
     </div>
   </section>
 </BaseLayout>
