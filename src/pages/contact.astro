@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact"
+  description="Contact Anh Bui about software engineering, fintech, Azure, and SaaS products."
+  sideBarActiveItemID="contact"
+>
+  <section class="mx-auto max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Contact</h1>
+    <p class="mt-4 text-lg opacity-80 leading-relaxed">
+      Get in touch to discuss software engineering, fintech and payment
+      platforms, Azure cloud systems, or SaaS product development.
+    </p>
+
+    <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <a
+        href="mailto:anh.bui@anhbui.dev"
+        class="rounded-2xl border border-primary/30 bg-primary/10 p-6 transition hover:-translate-y-1 hover:border-primary"
+      >
+        <div class="text-sm uppercase tracking-widest opacity-60">
+          Email
+        </div>
+        <div class="mt-3 text-lg font-semibold">anh.bui@anhbui.dev</div>
+      </a>
+
+      <a
+        href="mailto:btanh82@gmail.com"
+        class="rounded-2xl border border-base-300 bg-base-200/40 p-6 transition hover:-translate-y-1 hover:border-primary/60"
+      >
+        <div class="text-sm uppercase tracking-widest opacity-60">
+          Email
+        </div>
+        <div class="mt-3 text-lg font-semibold">btanh82@gmail.com</div>
+      </a>
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-4 text-sm">
+      <a
+        href="https://www.linkedin.com/in/btanh/"
+        target="_blank"
+        rel="noreferrer"
+        class="underline underline-offset-4 hover:text-primary"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="https://github.com/AnhBuiDeveloper"
+        target="_blank"
+        rel="noreferrer"
+        class="underline underline-offset-4 hover:text-primary"
+      >
+        GitHub
+      </a>
+    </div>
+  </section>
+</BaseLayout>

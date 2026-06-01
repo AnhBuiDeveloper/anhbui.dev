@@ -28,18 +28,52 @@ const {
     />
     {TRANSITION_API && <ViewTransitions />}
     <script is:inline>
-      if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "dark");
-      } else {
-        document.documentElement.setAttribute(
-          "data-theme",
-          localStorage.getItem("theme"),
-        );
-      }
-    </script>
-    <script>
-      import { themeChange } from "theme-change";
-      themeChange();
+      (() => {
+        const storageKey = "theme";
+        const defaultTheme = "dark";
+        const getTheme = () => localStorage.getItem(storageKey) || defaultTheme;
+
+        const applyTheme = (targetDocument = document) => {
+          const theme = getTheme();
+          targetDocument.documentElement.setAttribute("data-theme", theme);
+          targetDocument.querySelectorAll(".theme-controller").forEach((controller) => {
+            controller.checked = theme === controller.value;
+          });
+        };
+
+        applyTheme();
+
+        if (window.__anhBuiThemePersistenceInitialized) {
+          return;
+        }
+
+        window.__anhBuiThemePersistenceInitialized = true;
+
+        document.addEventListener("change", (event) => {
+          const controller = event.target.closest?.(".theme-controller");
+          if (!controller) {
+            return;
+          }
+
+          localStorage.setItem(
+            storageKey,
+            controller.checked ? controller.value : defaultTheme,
+          );
+          applyTheme();
+        });
+
+        document.addEventListener("astro:before-swap", (event) => {
+          applyTheme(event.newDocument);
+        });
+
+        document.addEventListener("astro:page-load", () => {
+          applyTheme();
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+          applyTheme();
+        });
+      })();
     </script>
   </head>
   <body>

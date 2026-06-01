@@ -1,0 +1,202 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const products = [
+  {
+    name: "WebCapture",
+    url: "https://webcapture.anhbui.dev/",
+    category: "Capture & Collaboration",
+    description:
+      "Capture visible areas, selected regions, full pages, open tabs, or URL lists. Annotate, redact sensitive details, and export or share the finished result from one Chromium extension.",
+    features: ["5 capture modes", "Annotations & redaction", "PDF and image export"],
+    browsers: "Chrome, Edge & Chromium",
+    accent: "from-sky-500/25 to-cyan-400/5",
+    initials: "WC",
+  },
+  {
+    name: "Easy Equalizer Pro",
+    url: "https://easyequalizer.anhbui.dev/",
+    category: "Audio",
+    description:
+      "Shape browser audio with quick presets, a 5-band equalizer, volume boost, and listening modes such as Night, Dialogue, Laptop Boost, and Headphone Fix.",
+    features: ["5-band EQ + preamp", "Listening modes", "Preset backup"],
+    browsers: "Chromium extension",
+    accent: "from-violet-500/25 to-fuchsia-400/5",
+    initials: "EQ",
+  },
+  {
+    name: "Internet Health Check",
+    url: "https://internethealthcheck.anhbui.dev/",
+    category: "Monitoring",
+    description:
+      "Monitor connection health with longer history, smart insights, advanced charts, PDF reports, custom targets, quiet hours, and speed test tools.",
+    features: ["Connection history", "Smart insights", "PDF reports"],
+    browsers: "Chrome & Edge",
+    accent: "from-emerald-500/25 to-teal-400/5",
+    initials: "IH",
+  },
+  {
+    name: "ChatGPT Export",
+    url: "https://chatgpt.export.anhbui.dev/",
+    category: "AI Workflow",
+    description:
+      "Export ChatGPT conversations with readable structure, preserved code and tables, and precise message ranges for polished offline archives.",
+    features: ["8 export formats", "Custom message ranges", "Structured documents"],
+    browsers: "Chrome & Edge",
+    accent: "from-green-500/25 to-emerald-400/5",
+    initials: "CE",
+  },
+  {
+    name: "Gemini Exporter",
+    url: "https://gemini.export.anhbui.dev/",
+    category: "AI Workflow",
+    description:
+      "Turn Gemini conversations into reusable documents while preserving headings, lists, tables, code blocks, and the parts of a thread you actually need.",
+    features: ["8 export formats", "Custom message ranges", "Purchase restore"],
+    browsers: "Chrome & Edge",
+    accent: "from-blue-500/25 to-indigo-400/5",
+    initials: "GE",
+  },
+  {
+    name: "Grok Exporter",
+    url: "https://grok.export.anhbui.dev/",
+    category: "AI Workflow",
+    description:
+      "Save Grok conversations as structured PDF, DOCX, Markdown, HTML, TXT, JSON, ZIP, or clipboard exports with flexible message scopes.",
+    features: ["8 export formats", "Readable archives", "License management"],
+    browsers: "Chrome; Edge pending",
+    accent: "from-slate-500/30 to-zinc-400/5",
+    initials: "GX",
+  },
+  {
+    name: "Browser Cleaner Pro",
+    url: "https://browser.cleaner.anhbui.dev/",
+    category: "Privacy & Automation",
+    description:
+      "Clear cache, history, downloads, cookies, form data, and more through browser APIs, with precise modes, protected domains, and automated cleaning routines.",
+    features: ["Safe Deep Clean", "Scheduled cleanup", "Local audit history"],
+    browsers: "Chrome & Edge",
+    accent: "from-orange-500/25 to-amber-400/5",
+    initials: "BC",
+  },
+];
+---
+
+<BaseLayout
+  title="Products"
+  description="Live SaaS products and browser extensions designed, built, and operated by Anh Bui."
+  sideBarActiveItemID="products"
+>
+  <section class="mb-10">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Products</h1>
+    <p class="mt-4 max-w-6xl text-lg opacity-80 leading-relaxed">
+      Alongside more than 20 years of software engineering experience, I
+      design, build, and operate my own SaaS products. These are live software
+      products used by a growing user base, not portfolio demos.
+    </p>
+    <p class="mt-3 max-w-6xl opacity-70 leading-relaxed">
+      The collection focuses on practical browser workflows: capturing pages,
+      improving audio, monitoring connectivity, exporting AI conversations,
+      and keeping browser data tidy. Each product reflects hands-on ownership
+      from product discovery and implementation through licensing, release,
+      support, and production operation.
+    </p>
+  </section>
+
+  <section
+    class="mb-10 grid grid-cols-1 gap-4 md:grid-cols-3"
+    aria-label="Product engineering experience"
+  >
+    <article class="rounded-2xl border border-primary/30 bg-primary/10 p-5">
+      <div class="text-3xl font-bold">{products.length}</div>
+      <h2 class="mt-2 font-semibold">Live products</h2>
+      <p class="mt-2 text-sm leading-relaxed opacity-75">
+        Personal software products actively available to real users across
+        everyday browser workflows.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-base-300 bg-base-200/40 p-5">
+      <div class="text-3xl font-bold">End-to-end</div>
+      <h2 class="mt-2 font-semibold">Product engineering</h2>
+      <p class="mt-2 text-sm leading-relaxed opacity-75">
+        Problem discovery, UX decisions, extension development, release
+        management, and continuous improvement in one feedback loop.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-base-300 bg-base-200/40 p-5">
+      <div class="text-3xl font-bold">Free + Pro</div>
+      <h2 class="mt-2 font-semibold">SaaS operation</h2>
+      <p class="mt-2 text-sm leading-relaxed opacity-75">
+        Licensing, device activation, paid plans, privacy-conscious design,
+        customer support, and reliable day-to-day operation.
+      </p>
+    </article>
+  </section>
+
+  <div class="mb-5">
+    <h2 class="text-2xl font-bold">Software in production</h2>
+    <p class="mt-2 opacity-70">
+      Visit each product page for its feature set, pricing, and installation
+      links.
+    </p>
+  </div>
+
+  <section
+    class="grid grid-cols-1 lg:grid-cols-2 gap-5"
+    aria-label="Personal SaaS products"
+  >
+    {
+      products.map((product) => (
+        <article class="group relative overflow-hidden rounded-2xl border border-base-300 bg-base-200/40 p-6 transition duration-200 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl">
+          <div
+            class={`absolute inset-x-0 top-0 h-24 bg-gradient-to-br ${product.accent} opacity-70`}
+            aria-hidden="true"
+          />
+          <div class="relative">
+            <div class="flex items-start justify-between gap-4">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-base-100/80 text-sm font-bold tracking-wider shadow-sm"
+                aria-hidden="true"
+              >
+                {product.initials}
+              </div>
+              <span class="badge badge-outline">{product.category}</span>
+            </div>
+
+            <h2 class="mt-6 text-2xl font-bold">{product.name}</h2>
+            <p class="mt-3 min-h-[6rem] leading-relaxed opacity-80">
+              {product.description}
+            </p>
+
+            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Key features">
+              {product.features.map((feature) => (
+                <li class="badge badge-ghost">{feature}</li>
+              ))}
+            </ul>
+
+            <div class="mt-6 flex items-center justify-between gap-4 border-t border-base-300 pt-4">
+              <span class="text-sm opacity-65">{product.browsers}</span>
+              <a
+                href={product.url}
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-primary btn-sm"
+                aria-label={`Visit ${product.name}`}
+              >
+                Visit product
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="h-4 w-4 fill-current"
+                  aria-hidden="true"
+                >
+                  <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V12H19V19Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+</BaseLayout>

@@ -1,22 +1,45 @@
 ---
 import ThemeController from "./ThemeController.astro";
+
+const navItems = [
+  { href: "/", label: "About" },
+  { href: "/products", label: "Products" },
+  { href: "/recommendations", label: "Recommendations" },
+  { href: "/cv", label: "CV" },
+  { href: "/contact", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+const isActive = (href) =>
+  href === "/" ? currentPath === "/" : currentPath.startsWith(href);
 ---
 
 <div
   class="sticky top-0 z-30 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm flex flex-col"
 >
-  <div class="navbar w-full max-w-[1200px] mx-auto">
+  <div class="navbar w-full max-w-[1200px] mx-auto px-6">
     <div class="navbar-start">
-      <a class="btn btn-ghost normal-case text-xl" href="/">AnhBui.dev</a>
+      <a class="btn btn-ghost normal-case text-xl" href="/">
+        AnhBui<span class="text-primary">.dev</span>
+      </a>
     </div>
     <div class="navbar-end">
       <div class="hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a href="/">About</a></li>
-          <li><a href="/case-studies">Case Studies</a></li>
-          <li><a href="/kb">Knowledge Base</a></li>
-          <li><a href="/cv">CV</a></li>
-          <li><a href="mailto:btanh82@gmail.com">Contact</a></li>
+          {
+            navItems.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class={isActive(item.href)
+                    ? "text-primary underline decoration-2 underline-offset-8"
+                    : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
       <ThemeController />
@@ -25,11 +48,18 @@ import ThemeController from "./ThemeController.astro";
   <div class="block lg:hidden w-full border-t border-base-200">
     <div class="w-full max-w-[900px] mx-auto">
       <ul class="menu menu-horizontal px-2 overflow-x-auto">
-        <li><a href="/">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/kb">Knowledge Base</a></li>
-        <li><a href="/cv">CV</a></li>
-        <li><a href="mailto:btanh82@gmail.com">Contact</a></li>
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class={isActive(item.href) ? "text-primary" : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>

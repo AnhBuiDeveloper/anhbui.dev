@@ -1,6 +1,6 @@
-# Anh Bui - Personal Knowledge Hub
+# Anh Bui - Software Engineer Portfolio
 
-Source code for [anhbui.dev](https://anhbui.dev), a personal portfolio and knowledge hub focusing on .NET, Azure, and microservices.
+Source code for [anhbui.dev](https://anhbui.dev), a personal portfolio for a senior software engineer building .NET, Azure, and SaaS products.
 
 ## 🛠️ Built With
 

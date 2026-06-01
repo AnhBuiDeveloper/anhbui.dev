@@ -1,230 +1,256 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const proofPoints = [
+  {
+    value: "20+",
+    label: "Years in software",
+    detail: "From long-lived platforms to modern cloud services.",
+  },
+  {
+    value: "7",
+    label: "Live SaaS products",
+    detail: "Browser software actively available to real users.",
+  },
+  {
+    value: "Production-first",
+    label: "Engineering mindset",
+    detail: "Secure, observable, resilient, and supportable by design.",
+  },
+];
+
+const engineeringStrengths = [
+  "Hosted checkout, tokenisation, 3-D Secure, and webhook-driven payment flows.",
+  "Partner integrations across REST, SOAP, files, secure authentication, and asynchronous processing.",
+  "Azure App Services, Functions, Queue Storage, SQL, Key Vault, and Application Insights.",
+  "Incremental legacy-to-cloud modernisation without losing operational stability.",
+];
+
+const productStrengths = [
+  "Product discovery, UX decisions, and focused solutions for everyday browser workflows.",
+  "Chrome, Edge, and Chromium extensions with free and Pro capabilities.",
+  "Licensing, device activation, release management, privacy-conscious design, and support.",
+  "A short feedback loop between real usage, product decisions, and continuous improvement.",
+];
+
+const capabilities = [
+  {
+    title: "Fintech & Payments",
+    description:
+      "Secure payment flows with clear state transitions, recoverability, and auditability.",
+  },
+  {
+    title: "Azure Cloud",
+    description:
+      "Pragmatic cloud services designed for visibility, reliability, and day-to-day operation.",
+  },
+  {
+    title: "Integrations",
+    description:
+      "Contract-aware connections across APIs, callbacks, queues, and file exchanges.",
+  },
+  {
+    title: "Reliability",
+    description:
+      "Retries, idempotency, correlation IDs, monitoring, and incident-focused debugging.",
+  },
+];
 ---
 
-<BaseLayout sideBarActiveItemID="home">
-  <section class="mt-6">
-    <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-        <!-- Identity -->
-        <aside class="md:col-span-4 md:order-2 order-1 md:justify-self-end">
-          <div class="flex items-center md:flex-col md:items-end gap-4">
-            <img
-              src="/profile.png"
-              alt="Anh Bui"
-              class="w-20 h-20 md:w-36 md:h-36 rounded-full object-cover ring-1 ring-white/15 shadow"
-              loading="eager"
-            />
-            <div class="text-left md:text-right">
-              <div class="font-semibold leading-tight">Anh Bui</div>
-              <div class="text-sm opacity-70">Based in UK</div>
-              <div class="text-sm opacity-60">Fintech • Payments • Azure</div>
-            </div>
-          </div>
-
-          <!-- Desktop CTA -->
-          <div class="mt-6 hidden md:flex flex-col items-end gap-2">
-            <a href="/kb" class="btn btn-primary btn-sm"
-              >Explore Knowledge Base</a
-            >
-            <a href="/case-studies" class="btn btn-outline btn-sm"
-              >Read Case Studies</a
-            >
-            <div class="text-sm opacity-70 mt-1">
-              <a
-                href="/cv"
-                class="underline underline-offset-4 hover:opacity-90">CV</a
-              >
-              <span class="opacity-50"> • </span>
-              <a
-                href="/contact"
-                class="underline underline-offset-4 hover:opacity-90">Contact</a
-              >
-            </div>
-          </div>
-        </aside>
-
-        <!-- Brand narrative -->
-        <div class="md:col-span-8 md:order-1 order-2">
-          <h1 class="text-5xl md:text-6xl font-bold tracking-tight">Anh Bui</h1>
-
-          <p class="mt-3 text-xl md:text-2xl font-semibold opacity-90">
-            Senior .NET Engineer specialising in fintech/payments, integrations,
-            and Azure cloud reliability
-          </p>
-
-          <!-- TAGS: Tier 1 (brand pillars) -->
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="badge badge-ghost">Fintech</span>
-            <span class="badge badge-ghost">Payments</span>
-            <span class="badge badge-ghost">Integrations</span>
-            <span class="badge badge-ghost">Azure</span>
-            <span class="badge badge-ghost">Reliability</span>
-          </div>
-
-          <!-- TAGS: Tier 2 (proof / technical keywords) -->
-          <div class="mt-2 flex flex-wrap gap-2 opacity-90">
-            <span class="badge badge-outline">PCI / Hosted Checkout</span>
-            <span class="badge badge-outline">Tokenisation</span>
-            <span class="badge badge-outline">3-D Secure (3DS)</span>
-            <span class="badge badge-outline">Webhooks / Callbacks</span>
-            <span class="badge badge-outline">Idempotency</span>
-            <span class="badge badge-outline">Retry + Circuit Breaker</span>
-            <span class="badge badge-outline">Azure Functions</span>
-            <span class="badge badge-outline">Azure Storage Queues</span>
-            <span class="badge badge-outline">App Insights</span>
-          </div>
-
-          <!-- Intro -->
-          <div class="mt-6 space-y-4 max-w-2xl">
-            <p class="opacity-85 leading-relaxed">
-              Senior .NET Engineer with <b>20+ years</b> of experience delivering
-              <b>business-critical systems</b>. In recent years my focus has
-              been on <b>fintech and payment platforms</b> — building secure, reliable,
-              and auditable services that hold up under real-world traffic and operational
-              pressure.
-            </p>
-
-            <p class="opacity-85 leading-relaxed">
-              I specialise in <b>integration-heavy systems</b>: hosted checkout
-              flows, tokenisation,
-              <b>3-D Secure</b>, callbacks/webhooks, and asynchronous processing
-              — designed with
-              <b>idempotency</b>, <b>resilience patterns</b>, and production
-              observability from day one.
-            </p>
-
-            <p class="opacity-85 leading-relaxed">
-              On the cloud side, I build and operate services on <b>Azure</b>,
-              using pragmatic architecture trade-offs and a “run-it-in-prod”
-              mindset: monitoring, alerting, incident-driven debugging, and
-              maintainability.
-            </p>
-          </div>
-
-          <!-- Strengths & achievements -->
-          <div class="mt-8">
-            <div class="text-xs uppercase tracking-widest opacity-60 mb-4">
-              Strengths & achievements
-            </div>
-
-            <ul class="space-y-2 text-sm md:text-base opacity-85">
-              <li class="flex gap-3">
-                <span class="opacity-60">•</span>
-                <span>
-                  Delivered end-to-end <b>payment integrations</b> (hosted checkout,
-                  tokenisation, 3DS) with robust callback/webhook handling and clear
-                  state transitions for auditing and supportability.
-                </span>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="opacity-60">•</span>
-                <span>
-                  Built <b>integration pipelines</b> across partners using REST/SOAP/files
-                  (FTP/SFTP/WebDAV), with pragmatic security (OAuth2/Bearer/Basic)
-                  and strong troubleshooting discipline.
-                </span>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="opacity-60">•</span>
-                <span>
-                  Implemented <b>cloud-native building blocks on Azure</b> (Functions,
-                  Storage Queues, App Services, Key Vault, Application Insights) and
-                  improved reliability with monitoring-first design.
-                </span>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="opacity-60">•</span>
-                <span>
-                  Strong reliability mindset: <b>retry/circuit breaker</b>,
-                  idempotency, correlation IDs, and incident-focused debugging
-                  to reduce MTTR and make systems easier to operate.
-                </span>
-              </li>
-
-              <li class="flex gap-3">
-                <span class="opacity-60">•</span>
-                <span>
-                  Proven modernisation approach: improving legacy platforms
-                  safely with incremental changes, reducing defects and
-                  operational risk while keeping delivery moving.
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Capability cards -->
-          <div class="mt-8">
-            <div class="text-xs uppercase tracking-widest opacity-60 mb-4">
-              What I build
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold mb-1">Fintech & Payments</div>
-                <p class="text-sm opacity-80">
-                  Hosted checkout, tokenisation, 3DS, async processing, and
-                  event-driven workflows — designed for compliance, failure
-                  recovery, and operational clarity.
-                </p>
-              </div>
-
-              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold mb-1">Integrations at Scale</div>
-                <p class="text-sm opacity-80">
-                  Partner APIs and file exchanges (REST/SOAP/files) with
-                  contract-first thinking, secure auth, retries, idempotency,
-                  and observability.
-                </p>
-              </div>
-
-              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold mb-1">Azure Cloud Engineering</div>
-                <p class="text-sm opacity-80">
-                  Azure Functions/Queues, App Services, Key Vault, App Insights
-                  — environment-aware configuration, CI/CD readiness, and
-                  monitoring-first operation.
-                </p>
-              </div>
-
-              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold mb-1">
-                  Reliability & Production Ops
-                </div>
-                <p class="text-sm opacity-80">
-                  Resilience patterns, incident-driven debugging, and pragmatic
-                  trade-offs that keep services stable, traceable, and easy to
-                  evolve.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mobile CTA -->
-          <div class="mt-8 flex flex-wrap gap-3 md:hidden">
-            <a href="/kb" class="btn btn-primary">Knowledge Base</a>
-            <a href="/case-studies" class="btn btn-outline">Case Studies</a>
-            <a href="/cv" class="btn btn-ghost">CV</a>
-            <a href="/contact" class="btn btn-ghost">Contact</a>
-          </div>
-
-          <div class="mt-3 text-sm opacity-70">
-            Want more detail? Go to
-            <a
-              href="/case-studies"
-              class="underline underline-offset-4 hover:opacity-90"
-              >Case Studies</a
-            >
-            <span class="opacity-50"> • </span>
-            <a href="/kb" class="underline underline-offset-4 hover:opacity-90"
-              >Knowledge Base</a
-            >
-          </div>
-        </div>
+<BaseLayout
+  title="Anh Bui | Senior Software Engineer"
+  description="Senior software engineer specialising in .NET, Azure, fintech, payments, distributed systems, and SaaS product development."
+  sideBarActiveItemID="home"
+>
+  <section class="grid grid-cols-1 gap-10 pb-12 pt-4 md:grid-cols-12 md:items-center md:pb-16 md:pt-10">
+    <div class="md:col-span-8">
+      <h1 class="text-5xl font-bold tracking-tight md:text-7xl">Anh Bui</h1>
+      <p class="mt-4 max-w-3xl text-2xl font-semibold leading-tight opacity-90 md:text-4xl">
+        Senior / Lead Software Engineer building reliable software for the real
+        world.
+      </p>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed opacity-75">
+        More than 20 years of experience across .NET, Azure, fintech, payments,
+        distributed systems, and legacy-to-cloud modernisation. I build
+        business-critical services that stay clear and supportable under
+        production pressure.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/products" class="btn btn-primary">Explore Products</a>
+        <a href="/cv" class="btn btn-outline">View CV</a>
+      </div>
+      <div class="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm opacity-65">
+        <span>.NET & Azure</span>
+        <span>Fintech & Payments</span>
+        <span>Distributed Systems</span>
+        <span>Product Engineering</span>
       </div>
     </div>
+
+    <aside class="flex items-center gap-5 md:col-span-4 md:flex-col md:items-end md:text-right">
+      <img
+        src="/profile.png"
+        alt="Anh Bui"
+        class="h-28 w-28 rounded-full object-cover ring-1 ring-white/20 shadow-xl md:h-44 md:w-44"
+        loading="eager"
+      />
+      <div>
+        <div class="text-lg font-semibold">Based in the UK</div>
+        <div class="mt-1 max-w-xs text-sm leading-relaxed opacity-65">
+          Senior engineering depth with hands-on ownership from architecture to
+          production support.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section
+    class="grid grid-cols-1 border-y border-base-300 md:grid-cols-3"
+    aria-label="Engineering highlights"
+  >
+    {
+      proofPoints.map((point) => (
+        <article class="border-base-300 py-6 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0">
+          <div class="text-3xl font-bold text-primary">{point.value}</div>
+          <h2 class="mt-2 font-semibold">{point.label}</h2>
+          <p class="mt-2 max-w-sm text-sm leading-relaxed opacity-65">
+            {point.detail}
+          </p>
+        </article>
+      ))
+    }
+  </section>
+
+  <section class="grid grid-cols-1 gap-12 border-b border-base-300 py-14 md:grid-cols-2 md:gap-16 md:py-20">
+    <article>
+      <div class="text-sm font-semibold uppercase tracking-widest text-primary">
+        Engineering depth
+      </div>
+      <h2 class="mt-3 text-3xl font-bold tracking-tight">
+        Complex systems, made operationally clear.
+      </h2>
+      <p class="mt-4 leading-relaxed opacity-75">
+        I specialise in integration-heavy platforms where reliability,
+        security, and traceability are part of the architecture. My approach is
+        pragmatic: understand the failure modes, make state explicit, and build
+        observability in from day one.
+      </p>
+      <ul class="mt-6 space-y-3">
+        {
+          engineeringStrengths.map((strength) => (
+            <li class="flex gap-3 text-sm leading-relaxed opacity-80">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="mt-0.5 h-5 w-5 shrink-0 fill-primary"
+                aria-hidden="true"
+              >
+                <path d="M9,16.17L4.83,12L3.41,13.41L9,19L21,7L19.59,5.59L9,16.17Z" />
+              </svg>
+              <span>{strength}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+
+    <article>
+      <div class="text-sm font-semibold uppercase tracking-widest text-primary">
+        Products in production
+      </div>
+      <h2 class="mt-3 text-3xl font-bold tracking-tight">
+        I build and operate my own SaaS products.
+      </h2>
+      <p class="mt-4 leading-relaxed opacity-75">
+        Alongside professional engineering work, I run a growing collection of
+        browser products used by real people. They turn engineering decisions
+        into a complete product lifecycle: delivery, operation, feedback, and
+        improvement.
+      </p>
+      <ul class="mt-6 space-y-3">
+        {
+          productStrengths.map((strength) => (
+            <li class="flex gap-3 text-sm leading-relaxed opacity-80">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="mt-0.5 h-5 w-5 shrink-0 fill-primary"
+                aria-hidden="true"
+              >
+                <path d="M9,16.17L4.83,12L3.41,13.41L9,19L21,7L19.59,5.59L9,16.17Z" />
+              </svg>
+              <span>{strength}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href="/products"
+        class="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+      >
+        Explore 7 live products
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="h-4 w-4 fill-current"
+          aria-hidden="true"
+        >
+          <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+        </svg>
+      </a>
+    </article>
+  </section>
+
+  <section class="border-b border-base-300 py-14 md:py-16">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl font-bold tracking-tight">What I bring</h2>
+      <p class="mt-3 leading-relaxed opacity-70">
+        Technical leadership grounded in delivery, production support, and
+        steady improvement of the systems people rely on.
+      </p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        capabilities.map((capability) => (
+          <article>
+            <h3 class="font-semibold">{capability.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed opacity-65">
+              {capability.description}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 gap-8 py-14 md:grid-cols-12 md:items-center md:py-16">
+    <div class="md:col-span-8">
+      <h2 class="text-3xl font-bold tracking-tight">
+        Trusted by people I have worked with.
+      </h2>
+      <p class="mt-3 max-w-2xl leading-relaxed opacity-70">
+        Recommendations from managers and colleagues highlight dependable
+        delivery, adaptability, Microsoft-stack depth, communication, and a
+        genuine interest in building better solutions.
+      </p>
+    </div>
+    <div class="flex flex-wrap gap-3 md:col-span-4 md:justify-end">
+      <a href="/recommendations" class="btn btn-outline">
+        Read Recommendations
+      </a>
+    </div>
+  </section>
+
+  <section class="rounded-2xl border border-primary/30 bg-primary/10 p-7 md:flex md:items-center md:justify-between md:gap-8 md:p-9">
+    <div>
+      <h2 class="text-3xl font-bold tracking-tight">Let's talk.</h2>
+      <p class="mt-3 max-w-2xl leading-relaxed opacity-75">
+        Get in touch to discuss software engineering, fintech and payment
+        platforms, Azure cloud systems, or SaaS product development.
+      </p>
+    </div>
+    <a href="/contact" class="btn btn-primary mt-6 shrink-0 md:mt-0">
+      Contact me
+    </a>
   </section>
 </BaseLayout>

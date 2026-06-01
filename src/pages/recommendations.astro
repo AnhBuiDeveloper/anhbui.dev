@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const recommendations = [
+  {
+    quote:
+      "Anh was a joy to work with. He is an experienced developer who is able to adapt well to whatever challenges he faces. He worked well within the team and produced great results in an environment which required not only a high level of programming skills but also a deep knowledge of the business.",
+    name: "Andrew Dobson",
+    context: ".NET / C# Developer · Managed Anh directly · Feb 2021",
+  },
+  {
+    quote:
+      "Anh is a highly professional and motivated developer. He was a pleasure to work with, always positive and self motivated. I believe he would be an asset to anyone's team.",
+    name: "Shane Devlin",
+    context:
+      "Chief Information Officer at EML · Senior colleague · Apr 2021",
+  },
+  {
+    quote:
+      "Anh is deeply knowledgeable about engineering solutions in the Microsoft stack in addition to being a great communicator and pleasure to work with.",
+    name: "Paul Lang",
+    context:
+      "Founder @ B2B Architect · Worked with Anh on the same team · Aug 2015",
+  },
+  {
+    quote:
+      "Anh Bui always work with passion, he never stop asking questions to make the solutions as best as it could be.",
+    name: "Nam Duong",
+    context:
+      "Senior Development Manager at CBTBW · Worked with Anh on the same team · May 2014",
+  },
+  {
+    quote:
+      "We took classes together. He was one of the great guys to work with during my undergraduate years.",
+    name: "Thuy Vu",
+    context:
+      "Amazon AGI / Web and Knowledge Services · Studied with Anh · Jul 2015",
+  },
+];
+
+const featuredRecommendations = recommendations.slice(0, 2);
+const additionalRecommendations = recommendations.slice(2);
+---
+
+<BaseLayout
+  title="Recommendations"
+  description="Recommendations from colleagues and managers who have worked with Anh Bui."
+  sideBarActiveItemID="recommendations"
+>
+  <section class="mb-10 max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+      Recommendations
+    </h1>
+    <p class="mt-4 text-lg opacity-80 leading-relaxed">
+      What managers and colleagues say about working with me.
+    </p>
+  </section>
+
+  <section
+    class="grid grid-cols-1 gap-5 lg:grid-cols-2"
+    aria-label="Featured LinkedIn recommendations"
+  >
+    {
+      featuredRecommendations.map((recommendation, index) => (
+        <figure class="flex flex-col justify-between rounded-2xl border border-base-300 bg-base-200/40 p-7">
+          <div
+            class="text-5xl font-bold leading-none text-primary opacity-70"
+            aria-hidden="true"
+          >
+            “
+          </div>
+          <blockquote class="mt-3 text-lg leading-relaxed text-base-content/90">
+            “{recommendation.quote}”
+          </blockquote>
+          <figcaption class="mt-7 border-t border-base-300 pt-4 text-sm">
+            <div class="flex flex-wrap items-center gap-2">
+              <div class="font-semibold">{recommendation.name}</div>
+              {
+                index === 0 && (
+                  <span class="badge badge-primary badge-sm">
+                    Direct manager
+                  </span>
+                )
+              }
+            </div>
+            <div class="mt-1 text-base-content/65">{recommendation.context}</div>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-xl font-bold">More recommendations</h2>
+    <div class="mt-4 divide-y divide-base-300 border-y border-base-300">
+      {
+        additionalRecommendations.map((recommendation) => (
+          <figure class="grid grid-cols-1 gap-3 py-5 md:grid-cols-12 md:gap-6">
+            <blockquote class="leading-relaxed text-base-content/80 md:col-span-8">
+              “{recommendation.quote}”
+            </blockquote>
+            <figcaption class="text-sm md:col-span-4">
+              <div class="font-semibold">{recommendation.name}</div>
+              <div class="mt-1 text-base-content/65">{recommendation.context}</div>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+
+  <div class="mt-8 flex flex-wrap items-center gap-4">
+    <a
+      href="https://www.linkedin.com/in/btanh/"
+      target="_blank"
+      rel="noreferrer"
+      class="btn btn-primary btn-sm"
+    >
+      View LinkedIn profile
+    </a>
+    <a href="/contact" class="text-sm underline underline-offset-4 hover:text-primary">
+      Contact me
+    </a>
+  </div>
+</BaseLayout>

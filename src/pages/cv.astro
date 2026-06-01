@@ -4,25 +4,64 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="CV" sideBarActiveItemID="cv">
+  <!-- PROFILE -->
+  <section class="mb-10 border-b border-base-300 pb-8">
+    <h1 class="text-4xl font-bold tracking-tight">Anh Bui</h1>
+    <p class="mt-2 text-xl font-semibold text-base-content/90">
+      Senior / Lead Software Engineer · .NET, Azure, Fintech & Payments
+    </p>
+    <p class="mt-2 text-base-content/65">Based in the United Kingdom</p>
+    <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+      <a
+        href="https://www.linkedin.com/in/btanh/"
+        target="_blank"
+        rel="noreferrer"
+        class="underline underline-offset-4 hover:text-primary"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="https://github.com/AnhBuiDeveloper"
+        target="_blank"
+        rel="noreferrer"
+        class="underline underline-offset-4 hover:text-primary"
+      >
+        GitHub
+      </a>
+      <a
+        href="mailto:anh.bui@anhbui.dev"
+        class="underline underline-offset-4 hover:text-primary"
+      >
+        anh.bui@anhbui.dev
+      </a>
+      <a
+        href="mailto:btanh82@gmail.com"
+        class="underline underline-offset-4 hover:text-primary"
+      >
+        btanh82@gmail.com
+      </a>
+    </div>
+  </section>
+
   <!-- SUMMARY -->
   <section class="mb-12">
-    <h1 class="text-3xl font-bold mb-4">Summary</h1>
+    <h2 class="text-2xl font-bold mb-4">Professional Summary</h2>
 
-    <p class="text-lg leading-relaxed text-slate-300">
-      Senior <strong>.NET Engineer</strong> with <strong
-        >20+ years of experience</strong
-      > delivering
-      <strong>business-critical systems</strong>, with a strong focus on
-      <strong>fintech, payments, integrations</strong>, and <strong
-        >Azure cloud platforms</strong
-      >.
+    <p class="text-lg leading-relaxed text-base-content/90">
+      Senior <strong>.NET Engineer</strong> with more than <strong
+        >20 years of software engineering experience</strong
+      > building and supporting business-critical systems. My recent work
+      focuses on <strong>fintech, payment platforms, distributed systems</strong>,
+      and <strong>reliable Azure cloud services</strong>.
     </p>
 
-    <p class="mt-4 text-slate-400 leading-relaxed">
-      Specialised in building <strong
-        >secure, reliable, and auditable payment solutions</strong
-      >, modernising legacy platforms, and designing integration-heavy systems
-      that are safe to run and evolve in production.
+    <p class="mt-4 text-base-content/75 leading-relaxed">
+      I enjoy turning complicated operational problems into software that is
+      secure, observable, and straightforward to support. I am comfortable
+      modernising long-lived systems incrementally, bridging legacy platforms
+      with modern cloud services while keeping production stable. Alongside my
+      professional engineering work, I design, build, and operate a growing
+      portfolio of SaaS products used by real browser users.
     </p>
   </section>
 
@@ -32,71 +71,135 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
     <div class="time-line-container grid gap-6">
       <TimeLineElement
-        title="Senior Software Engineer – Fintech / Payments"
-        subtitle="UK · Recent years"
+        title="Independent SaaS Product Builder"
+        subtitle="Personal products · Active development and operation"
       >
-        <ul class="list-disc ml-6 text-slate-300 grid gap-1">
+        <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Delivered end-to-end <strong>payment integrations</strong> using hosted
-            checkout, tokenisation, and <strong>3-D Secure (3DS)</strong>.
+            Designed, built, and operate <strong>seven live SaaS products</strong>
+            for practical browser workflows, with free and Pro capabilities.
           </li>
           <li>
-            Designed and operated <strong
-              >asynchronous, event-driven workflows</strong
-            > using Azure Storage Queues to improve reliability and fault isolation.
+            Developed Chrome, Edge, and Chromium extensions covering capture
+            tools, audio processing, connectivity monitoring, AI conversation
+            export, and browser privacy automation.
           </li>
           <li>
-            Built robust webhook and callback handling with <strong
-              >idempotency</strong
-            >, retries, and clear payment state transitions.
-          </li>
-          <li>
-            Improved observability with structured logging, correlation IDs, and
-            Azure Application Insights to reduce MTTR.
+            Own the complete product lifecycle: discovery, UX decisions,
+            implementation, licensing, device activation, release management,
+            privacy-conscious design, and customer support.
           </li>
         </ul>
       </TimeLineElement>
 
       <TimeLineElement
-        title="Senior / Lead .NET Engineer"
-        subtitle="Enterprise & regulated environments"
+        title="Senior Software Engineer"
+        subtitle="Aryza · Sep 2022 – Present · Birmingham, United Kingdom"
       >
-        <ul class="list-disc ml-6 text-slate-300 grid gap-1">
+        <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Designed and maintained large-scale <strong
-              >.NET enterprise systems</strong
-            >
-            supporting core business operations.
+            Work on a large-scale loan management and fintech platform,
+            supporting the full loan lifecycle and multiple third-party
+            integrations.
           </li>
           <li>
-            Led and contributed to <strong>integration-heavy platforms</strong> across
-            internal systems and third-party providers (REST, SOAP, file-based).
+            Build secure, resilient .NET services integrating with credit
+            agencies, fraud and identity providers, and payment gateways.
           </li>
           <li>
-            Played technical leadership roles including <strong>Dev Lead</strong
-            > and
-            <strong>Senior Engineer</strong>, mentoring junior and mid-level
-            developers.
+            Deliver payment flows including hosted checkout, card tokenisation,
+            3-D Secure, asynchronous callbacks, and webhook-driven processing.
+          </li>
+          <li>
+            Design Azure-based solutions with App Services, Azure Functions,
+            Queue Storage, Azure SQL, Application Insights, and Key Vault.
+          </li>
+          <li>
+            Apply resilience patterns including retries, circuit breakers, and
+            idempotency while bridging legacy VB6 systems with modern .NET
+            services.
           </li>
         </ul>
       </TimeLineElement>
 
       <TimeLineElement
-        title="Software Engineer / Analyst Programmer"
-        subtitle="Early career · Multiple domains"
+        title="Senior Software Engineer / Software Engineer"
+        subtitle="Pinewood Technologies · Jul 2017 – Aug 2022 · Birmingham, United Kingdom"
       >
-        <ul class="list-disc ml-6 text-slate-300 grid gap-1">
+        <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Developed applications across multiple industries including
-            healthcare, housing, manufacturing, and data transformation.
+            Progressed from Software Engineer to Senior Software Engineer,
+            working with C#, .NET Core, and ASP.NET Core.
           </li>
           <li>
-            Worked with <strong>VB6 and early .NET</strong>, gaining deep
-            understanding of legacy systems and long-lived platforms.
+            Built and maintained production software in a long-running
+            enterprise product environment.
           </li>
           <li>
-            Built a strong foundation in system design, debugging, and
-            production support.
+            Contributed to design decisions, feature delivery, troubleshooting,
+            and continuous improvement as responsibilities grew.
+          </li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement
+        title="Software Engineering Manager / Engineering Leadership"
+        subtitle="AS White Global · 2013 – Jun 2017 · Ho Chi Minh City, Vietnam"
+      >
+        <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
+          <li>
+            Progressed into engineering management, with the manager role held
+            from Jan 2017 to Jun 2017.
+          </li>
+          <li>
+            Oversaw hiring, training, and management of engineering teams with a
+            headcount of up to 17.
+          </li>
+          <li>
+            Worked with engineers to define project scope, timelines, budgets,
+            and technical requirements while promoting quality and continuous
+            improvement.
+          </li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement
+        title="Senior Software Engineer"
+        subtitle="Harvey Nash · Sep 2012 – Aug 2013 · Ho Chi Minh City, Vietnam"
+      >
+        <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
+          <li>
+            Developed browser-based applications and delivered software from
+            design specifications through testing and technical documentation.
+          </li>
+          <li>
+            Reviewed client requests, supported bug resolution, contributed to
+            architecture decisions, and researched solutions for difficult
+            technical problems.
+          </li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement
+        title="Senior .NET Developer and SD Team Leader"
+        subtitle="Easy IT Solutions Vietnam · Apr 2007 – Aug 2012 · Ho Chi Minh City, Vietnam"
+      >
+        <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
+          <li>
+            Built .NET applications and developed the technical leadership
+            foundation used throughout later senior and management roles.
+          </li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement
+        title="Programmer Analyst"
+        subtitle="Jabil Circuit · Nov 2009 – Mar 2010 · Ho Chi Minh City, Vietnam"
+      >
+        <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
+          <li>
+            Contributed to software analysis and delivery in a manufacturing
+            environment.
           </li>
         </ul>
       </TimeLineElement>
@@ -107,10 +210,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <section class="mb-12">
     <h2 class="text-2xl font-bold mb-4">Education</h2>
 
-    <ul class="list-disc ml-6 text-slate-300">
+    <ul class="list-disc ml-6 text-base-content/85">
       <li>
         Bachelor’s Degree in Information Technology / Computer Science
-        <span class="text-slate-400">(details available in full CV)</span>
+        <span class="text-base-content/65">(details available in full CV)</span>
       </li>
     </ul>
   </section>
@@ -119,7 +222,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <section class="mb-12">
     <h2 class="text-2xl font-bold mb-4">Certificates</h2>
 
-    <ul class="list-disc ml-6 text-slate-300">
+    <ul class="list-disc ml-6 text-base-content/85">
       <li>Microsoft .NET related certifications (historical)</li>
       <li>Agile / Scrum training and certifications</li>
       <li>Ongoing self-directed learning in cloud and system design</li>
@@ -130,9 +233,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <section class="mb-12">
     <h2 class="text-2xl font-bold mb-4">Skills</h2>
 
-    <ul class="list-disc ml-6 grid gap-2 text-slate-300">
+    <ul class="list-disc ml-6 grid gap-2 text-base-content/85">
       <li>
-        <strong>Languages & Frameworks:</strong> C#, .NET, ASP.NET, Web APIs
+        <strong>Languages & Frameworks:</strong> C#, .NET Framework, .NET Core,
+        ASP.NET Core, Web API
       </li>
       <li>
         <strong>Fintech & Payments:</strong> hosted checkout, tokenisation, 3DS, payment
@@ -143,25 +247,60 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
         (OAuth2, Bearer, Basic)
       </li>
       <li>
-        <strong>Cloud & Azure:</strong> Azure Functions, Storage Queues, App Services,
-        Key Vault, Application Insights
+        <strong>Cloud & Azure:</strong> Azure Functions, Queue Storage, App Services,
+        Azure SQL, Key Vault, Application Insights, Azure DevOps
+      </li>
+      <li>
+        <strong>Product Engineering:</strong> SaaS products, Chrome and Edge extensions,
+        licensing, device activation, release management, customer support
       </li>
       <li>
         <strong>Reliability:</strong> retries, circuit breaker, idempotency, logging,
         monitoring, alerting
       </li>
       <li>
-        <strong>Practices:</strong> Agile/Scrum, code reviews, mentoring, incremental
-        modernisation
+        <strong>Architecture & Practices:</strong> distributed systems, microservices,
+        software architecture, code reviews, mentoring, incremental modernisation
       </li>
     </ul>
   </section>
 
+  <!-- RECOMMENDATIONS -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-2">Recommendations</h2>
+    <p class="text-base-content/75 leading-relaxed">
+      Read recommendations from colleagues and managers who have worked with
+      me across software engineering and technical leadership roles.
+    </p>
+    <a
+      href="/recommendations"
+      class="mt-4 inline-block text-sm underline underline-offset-4 hover:text-primary"
+    >
+      View recommendations
+    </a>
+  </section>
+
   <!-- FOOTER CTA -->
   <section>
-    <p class="text-slate-400">
+    <p class="text-base-content/75">
       This web CV is a concise overview.
-      <a href="/contact" class="underline hover:text-white"> Contact me </a>
+      View my
+      <a
+        href="https://www.linkedin.com/in/btanh/"
+        target="_blank"
+        rel="noreferrer"
+        class="underline hover:text-primary"
+      >
+        LinkedIn profile
+      </a>
+      or contact me at
+      <a href="mailto:anh.bui@anhbui.dev" class="underline hover:text-primary">
+        anh.bui@anhbui.dev
+      </a>
+      or
+      <a href="mailto:btanh82@gmail.com" class="underline hover:text-primary">
+        btanh82@gmail.com
+      </a>
       to request a detailed CV or discuss opportunities.
     </p>
   </section>
