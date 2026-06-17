@@ -13,7 +13,7 @@ export default function (title: string, staticSlug: string) {
       .replace(/\s+/g, '-')
       // remove special characters
       .replace(/[^\w-]/g, '')
-      // remove leading & trailing separtors
+      // remove leading & trailing separators
       .replace(/^-+|-+$/g, '')
   )
 }
