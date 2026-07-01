@@ -8,7 +8,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <section class="mb-10 border-b border-base-300 pb-8">
     <h1 class="text-4xl font-bold tracking-tight">Anh Bui</h1>
     <p class="mt-2 text-xl font-semibold text-base-content/90">
-      Senior / Lead Software Engineer · .NET, Azure, Fintech & Payments
+      Senior / Lead Software Engineer · .NET, Azure, Financial Systems & SaaS Products
     </p>
     <p class="mt-2 text-base-content/65">Based in the United Kingdom</p>
     <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
@@ -50,18 +50,36 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <p class="text-lg leading-relaxed text-base-content/90">
       Senior <strong>.NET Engineer</strong> with more than <strong
         >20 years of software engineering experience</strong
-      > building and supporting business-critical systems. My recent work
-      focuses on <strong>fintech, payment platforms, distributed systems</strong>,
-      and <strong>reliable Azure cloud services</strong>.
+      > building, modernising, and supporting business-critical systems across
+      financial services, enterprise platforms, Azure cloud services,
+      integrations, and SaaS products.
     </p>
 
     <p class="mt-4 text-base-content/75 leading-relaxed">
-      I enjoy turning complicated operational problems into software that is
-      secure, observable, and straightforward to support. I am comfortable
-      modernising long-lived systems incrementally, bridging legacy platforms
-      with modern cloud services while keeping production stable. Alongside my
-      professional engineering work, I design, build, and operate a growing
-      portfolio of SaaS products used by real browser users.
+      My recent work focuses on enterprise lending and collections platforms,
+      public API integration, SQL Server, legacy VB6 to C# modernisation, and
+      root-cause debugging across large, long-lived codebases. I am a methodical
+      investigator who traces failures through code, configuration, data, and
+      version history rather than patching symptoms. Alongside professional
+      engineering work, I design, build, and operate a growing portfolio of SaaS
+      products used by real browser users.
+    </p>
+
+    <p class="mt-4 text-base-content/75 leading-relaxed">
+      Earlier roles add breadth across automotive dealer management, healthcare,
+      e-payment, housing communications, document management, workflow systems,
+      data transformation, insurance, compensation services, and manufacturing.
+      I have also spent around eight years in development lead, technical lead,
+      Scrum Master, and project management responsibilities, managing teams up
+      to 17 people.
+    </p>
+
+    <p class="mt-4 text-base-content/75 leading-relaxed">
+      I actively use agentic AI development as part of my engineering workflow:
+      Claude Code, Model Context Protocol (MCP), PowerShell automation, custom
+      skills and commands, hooks, context/memory engineering, prompt design,
+      root-cause investigation, refactoring, QA, documentation, and faster
+      feedback loops.
     </p>
   </section>
 
@@ -76,18 +94,24 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       >
         <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Designed, built, and operate <strong>seven live SaaS products</strong>
+            Designed, built, and operate <strong>eight live SaaS products</strong>
             for practical browser workflows, with free and Pro capabilities.
           </li>
           <li>
             Developed Chrome, Edge, and Chromium extensions covering capture
-            tools, audio processing, connectivity monitoring, AI conversation
-            export, and browser privacy automation.
+            tools, audio processing, connectivity and page-change monitoring,
+            refresh automation, AI conversation export, and browser privacy
+            automation.
           </li>
           <li>
             Own the complete product lifecycle: discovery, UX decisions,
             implementation, licensing, device activation, release management,
             privacy-conscious design, and customer support.
+          </li>
+          <li>
+            Use AI-assisted development to speed up product design, code
+            exploration, implementation planning, test-case thinking,
+            documentation, and repetitive release/support workflows.
           </li>
         </ul>
       </TimeLineElement>
@@ -98,26 +122,69 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       >
         <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Work on a large-scale loan management and fintech platform,
-            supporting the full loan lifecycle and multiple third-party
-            integrations.
+            Backend engineer on an enterprise lending and collections platform,
+            a large, long-lived .NET codebase including modules migrated from
+            legacy VB6 to C#.
           </li>
           <li>
-            Build secure, resilient .NET services integrating with credit
-            agencies, fraud and identity providers, and payment gateways.
+            Built and supported secure .NET services integrating with credit
+            agencies, fraud and identity providers, payment gateways, and public
+            API consumers.
           </li>
           <li>
-            Deliver payment flows including hosted checkout, card tokenisation,
-            3-D Secure, asynchronous callbacks, and webhook-driven processing.
+            Diagnosed and fixed defects across collections, statements, audit,
+            and rate-change subsystems, consistently identifying the true root
+            cause rather than treating surface symptoms.
           </li>
           <li>
-            Design Azure-based solutions with App Services, Azure Functions,
-            Queue Storage, Azure SQL, Application Insights, and Key Vault.
+            Resolved a production integration failure by tracing it through Git
+            tag ancestry, fragmented configuration sources, and OAuth token
+            endpoint behaviour, pinpointing a missed configuration regression.
           </li>
           <li>
-            Apply resilience patterns including retries, circuit breakers, and
-            idempotency while bridging legacy VB6 systems with modern .NET
-            services.
+            Mapped how a single logical service URL was resolved from multiple
+            configuration sources, including Azure App Config and
+            database-stored config, documenting config-drift risks for
+            environment setup.
+          </li>
+          <li>
+            Contributed to Azure-based solutions using services such as App
+            Services, Azure Functions, Queue Storage, Azure SQL, Application
+            Insights, and Key Vault.
+          </li>
+          <li>
+            Extended a public SOAP API with new operations and ran QA against
+            live integration endpoints, designing positive, negative, and edge
+            test cases.
+          </li>
+          <li>
+            Worked on application-layer encryption and credential-handling
+            components.
+          </li>
+          <li>
+            Built PowerShell automation and adopted AI-assisted tooling,
+            including Claude Code and MCP, to speed up codebase navigation and
+            team workflows.
+          </li>
+          <li>
+            Used Claude Code daily on a large production .NET/SQL codebase for
+            code navigation, root-cause debugging, refactoring, QA, and targeted
+            script generation while preserving manual verification.
+          </li>
+          <li>
+            Set up and configured MCP servers, diagnosed tool behaviour such as
+            scope-gated results and resolution paths, and shaped reusable
+            workflows for team use.
+          </li>
+          <li>
+            Authored, installed, and distributed reusable AI skills and
+            slash-commands, including PowerShell automation to provision a
+            shared skill library locally.
+          </li>
+          <li>
+            Configured session hooks, custom operating modes, and persistent
+            structured file-based memory so context and findings survive across
+            sessions.
           </li>
         </ul>
       </TimeLineElement>
@@ -128,16 +195,26 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       >
         <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Progressed from Software Engineer to Senior Software Engineer,
-            working with C#, .NET Core, and ASP.NET Core.
+            Worked on Pinewood DMS, an all-in-one car dealer management system
+            covering CRM, vehicles, accounts, workshops, parts, and partner
+            integrations.
           </li>
           <li>
-            Built and maintained production software in a long-running
-            enterprise product environment.
+            Designed, developed, and maintained inbound and outbound
+            integrations between dealers, manufacturers, governments, and other
+            partners.
           </li>
           <li>
-            Contributed to design decisions, feature delivery, troubleshooting,
-            and continuous improvement as responsibilities grew.
+            Delivered integration patterns across flat files, XML, FTP/SFTP,
+            WebDAV, SOAP, WCF, REST APIs, Basic Auth, OAuth, and OAuth2.
+          </li>
+          <li>
+            Helped improve generic integration frameworks, reduce duplicate
+            code, address technical debt, and mentor two to three developers.
+          </li>
+          <li>
+            Used SQL Server, SQL Azure, Azure Monitor, Application Insights,
+            Azure DevOps, TFVC, Git, Autofac, SOAP UI, Fiddler, and Postman.
           </li>
         </ul>
       </TimeLineElement>
@@ -160,22 +237,40 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
             and technical requirements while promoting quality and continuous
             improvement.
           </li>
+          <li>
+            Led delivery for document management, standard communication,
+            workflow, meeting management, and compensation submission systems
+            for Australian clients.
+          </li>
+          <li>
+            Owned solution architecture, data design, branching and release
+            strategy, builds, code review, mentoring, and client interaction.
+          </li>
+          <li>
+            Worked with ASP.NET MVC, Web API, WCF, Entity Framework, AngularJS,
+            Workflow Foundation, Autofac, SQL Server, Jenkins, MS Build, and
+            Git.
+          </li>
         </ul>
       </TimeLineElement>
 
       <TimeLineElement
-        title="Senior Software Engineer"
-        subtitle="Harvey Nash · Sep 2012 – Aug 2013 · Ho Chi Minh City, Vietnam"
+        title="Senior Software Engineer and Team Leader"
+        subtitle="Harvey Nash / NashTech · Jun 2012 – Jul 2013 · Ho Chi Minh City, Vietnam"
       >
         <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Developed browser-based applications and delivered software from
-            design specifications through testing and technical documentation.
+            Led work on a communication engine for a housing system, supporting
+            letters, email, SMS, templates, data tags, ad-hoc communications,
+            scheduled processes, and event-triggered bulk communication.
           </li>
           <li>
-            Reviewed client requests, supported bug resolution, contributed to
-            architecture decisions, and researched solutions for difficult
-            technical problems.
+            Supported proposal estimation, technical design, team coordination,
+            builds, releases, client interaction, and post-project evaluation.
+          </li>
+          <li>
+            Used C#, .NET Framework, ASP.NET MVC, WCF, Windows Service, Unity,
+            NHibernate, Log4Net, SQL Server, and TFS.
           </li>
         </ul>
       </TimeLineElement>
@@ -186,8 +281,27 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       >
         <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Built .NET applications and developed the technical leadership
-            foundation used throughout later senior and management roles.
+            Led and developed e-banking, e-business, healthcare, insurance,
+            online payment, data transformation, and cloud/SaaS projects.
+          </li>
+          <li>
+            Delivered EZDesigner/400 for IBM iSeries AS/400 document, cheque,
+            and barcode-label design workflows.
+          </li>
+          <li>
+            Researched and prototyped EZConnect on Cloud, migrating background
+            data transformation processes toward a multi-tenant SaaS model on
+            Windows Azure and SQL Azure.
+          </li>
+          <li>
+            Built healthcare appointment reminders and EDI 835 auto-posting
+            modules, plus EZeDocs / EZPaySuite payment and payroll document
+            tooling.
+          </li>
+          <li>
+            Used C#, .NET Framework, Windows Services, WCF, GDI+, SQL Server,
+            DB2, Spring.NET, NHibernate, CodeSmith, Infragistics, ComponentArt,
+            TFS, and Microsoft Project Server.
           </li>
         </ul>
       </TimeLineElement>
@@ -198,8 +312,34 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       >
         <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
           <li>
-            Contributed to software analysis and delivery in a manufacturing
+            Worked directly with global and regional IT teams to analyse and
+            resolve business and technical issues in a manufacturing
             environment.
+          </li>
+          <li>
+            Developed interfaces, maintained business applications, supported
+            data retrieval workflows, and reviewed system integrity concerns.
+          </li>
+          <li>
+            Used VB6, COM+, Distributed COM, SQL Server Reporting Services, and
+            C# / .NET Framework.
+          </li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement
+        title="Junior .NET Application and Web Developer"
+        subtitle="Wide-Link Group VN · 2005 – 2007 · Ho Chi Minh City, Vietnam"
+      >
+        <ul class="list-disc ml-6 text-base-content/85 grid gap-1">
+          <li>
+            Started as an apprentice, part-time, and then full-time developer
+            working across C++, C#, .NET, and web development.
+          </li>
+          <li>
+            Built a Visio add-in, IVR system modules, and website backend /
+            frontend functionality using SQL Server, C#, JavaScript, XML, CSS,
+            and Ajax.
           </li>
         </ul>
       </TimeLineElement>
@@ -210,10 +350,25 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <section class="mb-12">
     <h2 class="text-2xl font-bold mb-4">Education</h2>
 
-    <ul class="list-disc ml-6 text-base-content/85">
+    <ul class="list-disc ml-6 grid gap-2 text-base-content/85">
       <li>
-        Bachelor’s Degree in Information Technology / Computer Science
-        <span class="text-base-content/65">(details available in full CV)</span>
+        Bachelor of Science in Computer Science and Technology, Faculty of
+        Information Technology, Ho Chi Minh University of Natural Science
+        <span class="text-base-content/65">(2001 – 2005)</span>
+      </li>
+      <li>
+        MBA / Business Administration studies, School of Industrial Management,
+        Ho Chi Minh University of Technology
+        <span class="text-base-content/65">(2013 – 2015)</span>
+      </li>
+      <li>
+        Pre-MBA Business Administration, School of Industrial Management, Ho Chi
+        Minh University of Technology
+        <span class="text-base-content/65">(2010 – 2011)</span>
+      </li>
+      <li>
+        Leadership training, RMIT University Vietnam
+        <span class="text-base-content/65">(2015)</span>
       </li>
     </ul>
   </section>
@@ -229,38 +384,175 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </ul>
   </section>
 
+  <!-- AI-ASSISTED ENGINEERING -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">AI-Assisted Engineering</h2>
+
+    <dl class="mb-5 grid gap-3 text-base-content/85 md:grid-cols-2">
+      <div>
+        <dt class="font-semibold">Languages/tools</dt>
+        <dd class="mt-1 text-sm leading-relaxed opacity-75">
+          Claude Code (agentic CLI), Model Context Protocol (MCP), PowerShell
+        </dd>
+      </div>
+      <div>
+        <dt class="font-semibold">Areas</dt>
+        <dd class="mt-1 text-sm leading-relaxed opacity-75">
+          Agentic coding workflows, MCP server setup, custom skills/commands,
+          hooks, context/memory engineering, prompt design for debugging and QA
+        </dd>
+      </div>
+    </dl>
+
+    <ul class="list-disc ml-6 grid gap-2 text-base-content/85">
+      <li>
+        Use agentic AI coding tools daily on a large production .NET/SQL
+        codebase for code navigation, root-cause debugging, refactoring, and QA.
+      </li>
+      <li>
+        Set up and configured MCP servers; diagnosed tool behaviour such as
+        scope-gated results and resolution paths to make them usable across a
+        team.
+      </li>
+      <li>
+        Authored, installed, and distributed reusable AI skills and
+        slash-commands; built a PowerShell downloader to provision a shared
+        skill library locally.
+      </li>
+      <li>
+        Configured session hooks and custom operating modes to shape assistant
+        behaviour for different engineering tasks.
+      </li>
+      <li>
+        Engineered persistent, structured file-based memory so context and
+        findings survive across sessions, reducing repeat investigation.
+      </li>
+      <li>
+        Direct AI tooling toward high-value engineering work: reproducing
+        failures, tracing bugs through code, configuration, and Git history, and
+        designing test cases.
+      </li>
+    </ul>
+  </section>
+
   <!-- SKILLS -->
   <section class="mb-12">
     <h2 class="text-2xl font-bold mb-4">Skills</h2>
 
     <ul class="list-disc ml-6 grid gap-2 text-base-content/85">
       <li>
-        <strong>Languages & Frameworks:</strong> C#, .NET Framework, .NET Core,
-        ASP.NET Core, Web API
+        <strong>Languages & runtimes:</strong> C#, .NET Framework / .NET, .NET
+        Core, VB6 legacy, SQL (T-SQL), PowerShell, JavaScript, TypeScript
       </li>
       <li>
-        <strong>Fintech & Payments:</strong> hosted checkout, tokenisation, 3DS, payment
-        callbacks, reconciliation
+        <strong>Backend:</strong> WCF / SOAP services, public API design and
+        integration, ASP.NET Core, Web API, WinForms, Entity Framework,
+        dependency injection
       </li>
       <li>
-        <strong>Integrations:</strong> REST, SOAP/WCF, FTP/SFTP/WebDAV, secure authentication
-        (OAuth2, Bearer, Basic)
+        <strong>Fintech & payments:</strong> lending and collections platforms,
+        hosted checkout, tokenisation, 3-D Secure, callbacks, reconciliation,
+        auditability
       </li>
       <li>
-        <strong>Cloud & Azure:</strong> Azure Functions, Queue Storage, App Services,
-        Azure SQL, Key Vault, Application Insights, Azure DevOps
+        <strong>Integrations:</strong> REST, SOAP/WCF, FTP/SFTP/WebDAV, secure
+        authentication, OAuth / identity-token integration
       </li>
       <li>
-        <strong>Product Engineering:</strong> SaaS products, Chrome and Edge extensions,
-        licensing, device activation, release management, customer support
+        <strong>Data:</strong> SQL Server, SQL Azure, MySQL, IBM DB2, dynamic
+        SQL, query debugging, SQL execution plans, SQL Profiler, schema and
+        audit-subsystem design
       </li>
       <li>
-        <strong>Reliability:</strong> retries, circuit breaker, idempotency, logging,
-        monitoring, alerting
+        <strong>Cloud & Azure:</strong> Azure Functions, Queue Storage, App
+        Services, Azure SQL, Key Vault, Application Insights, Azure App Config,
+        Azure DevOps
       </li>
       <li>
-        <strong>Architecture & Practices:</strong> distributed systems, microservices,
-        software architecture, code reviews, mentoring, incremental modernisation
+        <strong>Security:</strong> application-layer encryption,
+        credential/secret handling
+      </li>
+      <li>
+        <strong>Product Engineering:</strong> SaaS products, Chrome and Edge
+        extensions, licensing, device activation, release management, customer
+        support
+      </li>
+      <li>
+        <strong>Tooling & workflow:</strong> Git, Azure DevOps, pull-request
+        review, CI build scripts, PowerShell, Claude Code, MCP, Fiddler,
+        Postman, SOAP UI, Jenkins, TFS
+      </li>
+      <li>
+        <strong>AI-assisted development:</strong> ChatGPT, Codex, Claude Code,
+        MCP workflows, MCP server configuration, prompt engineering, skill and
+        slash-command authoring, hooks, context/memory engineering, codebase
+        exploration, debugging support, documentation, automation, and test-case
+        design
+      </li>
+      <li>
+        <strong>Architecture & platforms:</strong> N-tier and module-based
+        architecture, microservices design, RabbitMQ, SignalR, Docker,
+        Kubernetes, Portainer
+      </li>
+      <li>
+        <strong>Practices:</strong> root-cause analysis, QA / test-case design,
+        legacy refactoring, AI-assisted development (Claude Code, MCP, skill
+        authoring)
+      </li>
+    </ul>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4">Highlights</h2>
+
+    <ul class="list-disc ml-6 grid gap-2 text-base-content/85">
+      <li>
+        Root-cause debugging in large legacy .NET and SQL systems, finding the
+        real cause rather than the symptom.
+      </li>
+      <li>
+        20+ years across senior engineering, technical leadership, delivery,
+        mentoring, enterprise software, and production support.
+      </li>
+      <li>
+        Around eight years of development lead, technical lead, Scrum Master,
+        and project management responsibilities with teams up to 17 people.
+      </li>
+      <li>
+        Integration and configuration forensics across Git history, config
+        sources, and OAuth / identity flows.
+      </li>
+      <li>
+        Fintech, lending, collections, payments, Azure cloud services, and
+        partner integrations.
+      </li>
+      <li>
+        Public SOAP / WCF API extension and QA across live integration
+        environments.
+      </li>
+      <li>
+        Legacy VB6 to C# modernisation in a production financial platform.
+      </li>
+      <li>
+        Developer-tooling and automation mindset across PowerShell and
+        AI-assisted development.
+      </li>
+      <li>
+        Agentic AI development with Claude Code on real production code for
+        debugging, refactoring, QA, and codebase navigation.
+      </li>
+      <li>
+        MCP server configuration and troubleshooting, custom skills,
+        slash-commands, session hooks, and context/memory engineering.
+      </li>
+      <li>
+        Built PowerShell automation to distribute a shared AI skill library
+        across a team.
+      </li>
+      <li>
+        Independent SaaS product ownership across UX, implementation, licensing,
+        release management, privacy-conscious design, and support.
       </li>
     </ul>
   </section>

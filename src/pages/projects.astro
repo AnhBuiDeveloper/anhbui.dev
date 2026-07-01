@@ -1,51 +1,156 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
+
+const engineeringWork = [
+  {
+    title: "Loan Management & Fintech Platform",
+    context: "Aryza · Senior Software Engineer",
+    description:
+      "Secure, resilient .NET services supporting the full loan lifecycle, integrating with credit agencies, fraud and identity providers, and payment gateways.",
+    highlights: [
+      "Hosted checkout, card tokenisation, 3-D Secure, and webhook-driven payment processing",
+      "Azure App Services, Functions, Queue Storage, SQL, Key Vault, and Application Insights",
+      "Resilience patterns: retries, circuit breakers, idempotency, and correlation IDs",
+    ],
+    tags: ["Fintech", "Payments", "Azure", ".NET"],
+  },
+  {
+    title: "Dealer Management Partner Integrations",
+    context: "Pinewood Technologies · Senior Software Engineer",
+    description:
+      "Two-way integrations between car dealers, manufacturers, governments, and other partners for a long-running dealer management platform.",
+    highlights: [
+      "Configurable inbound and outbound integrations across files, SOAP/WCF, REST, FTP/SFTP, WebDAV, OAuth, and OAuth2",
+      "Generic frameworks to reduce duplicated integration code and lower bug risk",
+      "Mentoring, technical debt reduction, SQL debugging, Azure monitoring, and production support",
+    ],
+    tags: ["Integrations", "Automotive", ".NET", "SQL"],
+  },
+  {
+    title: "Document, Workflow & Communication Systems",
+    context: "AS White Global / Harvey Nash · Technical Lead",
+    description:
+      "Lead delivery for document management, communication engines, workflow prototypes, meeting tools, and compensation submission systems.",
+    highlights: [
+      "Solution architecture, data design, release strategy, build ownership, code review, and client-facing delivery",
+      "Teams up to 17 people across Agile and waterfall delivery models",
+      "ASP.NET MVC, Web API, WCF, Entity Framework, AngularJS, Workflow Foundation, SQL Server, Jenkins, and TFS",
+    ],
+    tags: ["Leadership", "Workflow", "Communication", ".NET"],
+  },
+  {
+    title: "E-payment, Healthcare & Data Transformation Products",
+    context: "Easy IT Solutions · Senior .NET Developer / Team Leader",
+    description:
+      "Product and project work across e-banking, e-business, healthcare, insurance, payments, document design, and data transformation.",
+    highlights: [
+      "Payroll cheque and payment document tooling, EDI 835 auto-posting, appointment reminders, and AS/400 document design",
+      "Early multi-tenant SaaS and Windows Azure research for cloud data transformation processes",
+      "C#, Windows Services, WCF, SQL Server, DB2, Spring.NET, NHibernate, GDI+, TFS, and Microsoft Project Server",
+    ],
+    tags: ["Payments", "Healthcare", "Azure", "Data"],
+  },
+  {
+    title: "AnhBui Dev — SaaS Product Suite",
+    context: "Independent · Design, build & operate",
+    description:
+      "A growing portfolio of eight live browser products on Chrome, Edge, and Chromium, owned end-to-end from product discovery through licensing, billing, release, and support.",
+    highlights: [
+      "MV3 extensions with SaaS backends: licensing, device activation, and Stripe billing",
+      "Privacy-conscious design with free and Pro capabilities",
+      "Release management and a short feedback loop between real usage and improvement",
+    ],
+    tags: ["SaaS", "Product Engineering", "TypeScript"],
+  },
+  {
+    title: "AI-Assisted Engineering Workflow",
+    context: "Personal productivity and team workflow",
+    description:
+      "Agentic AI development workflows for real production engineering: codebase understanding, root-cause investigation, automation, QA, and team enablement.",
+    highlights: [
+      "Claude Code on a large production .NET/SQL codebase for navigation, debugging, refactoring, and QA",
+      "MCP server setup and troubleshooting, including scope-gated results and tool resolution behaviour",
+      "Reusable skills, slash-commands, session hooks, structured memory, and PowerShell distribution for shared team workflows",
+    ],
+    tags: ["AI", "Automation", "Developer Tooling", "Workflow"],
+  },
+];
 ---
 
-<BaseLayout title="Projects" sideBarActiveItemID="projects">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
-  </div>
+<BaseLayout
+  title="Projects"
+  description="Engineering work by Anh Bui across financial systems, partner integrations, Azure cloud services, legacy modernisation, technical leadership, SaaS products, and AI-assisted development."
+  sideBarActiveItemID="projects"
+>
+  <section class="mb-12 max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Projects</h1>
+    <p class="mt-4 text-lg opacity-80 leading-relaxed">
+      A selection of engineering themes from my career: integration-heavy,
+      production-critical systems, financial platforms, partner integrations,
+      cloud and legacy modernisation work, technical leadership, AI-assisted
+      engineering workflows, and the SaaS products I design, build, and operate
+      myself.
+    </p>
+  </section>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="https://placehold.co/600x400?text=Project+Thumbnail"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="https://placehold.co/600x400?text=Project+Thumbnail"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
+  <!-- ENGINEERING WORK -->
+  <section class="mb-14">
+    <h2 class="text-2xl font-bold tracking-tight">Engineering work</h2>
+    <p class="mt-2 max-w-3xl opacity-70 leading-relaxed">
+      Representative areas of professional and independent work. Details are
+      anonymised where they relate to commercial platforms.
+    </p>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-  </div>
+    <div class="mt-7 grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-3">
+      {
+        engineeringWork.map((project) => (
+          <article class="flex flex-col rounded-2xl border border-base-300 bg-base-200/40 p-6 transition duration-200 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl">
+            <h3 class="text-xl font-bold">{project.title}</h3>
+            <div class="mt-1 text-sm font-medium text-primary">
+              {project.context}
+            </div>
+            <p class="mt-3 leading-relaxed opacity-80">{project.description}</p>
+            <ul class="mt-4 grid gap-2">
+              {project.highlights.map((highlight) => (
+                <li class="flex gap-2 text-sm leading-relaxed opacity-75">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="mt-0.5 h-4 w-4 shrink-0 fill-primary"
+                    aria-hidden="true"
+                  >
+                    <path d="M9,16.17L4.83,12L3.41,13.41L9,19L21,7L19.59,5.59L9,16.17Z" />
+                  </svg>
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+            <ul class="mt-5 flex flex-wrap gap-2 pt-4 border-t border-base-300">
+              {project.tags.map((tag) => (
+                <li class="badge badge-ghost">{tag}</li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
 
-  <HorizontalCard
-    title="Demo Project 3"
-    img="https://placehold.co/600x400?text=Project+Thumbnail"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 4"
-    img="https://placehold.co/600x400?text=Project+Thumbnail"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 5"
-    img="https://placehold.co/600x400?text=Project+Thumbnail"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
+    <div class="mt-6">
+      <a
+        href="/products"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+      >
+        Explore the live products
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="h-4 w-4 fill-current"
+          aria-hidden="true"
+        >
+          <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
 </BaseLayout>
